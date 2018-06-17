@@ -1,3 +1,6 @@
+var name = prompt ('Ingresa tu nombre por favor');
+var name1 = document.getElementById('name');
+name1.textContent ="Bienvenid@  " + name;
 //creacion de elemenntos htmla traves del dom
 //seleccion delm nodo padre
 /* const menuElement=document.getElementById('menu');
