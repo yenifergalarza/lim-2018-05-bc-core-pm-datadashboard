@@ -110,14 +110,32 @@ const computeUsersStats = (users, progress, courses) => {
         user => {
             let id = user.id;
             //Primero declarar el objeto stats y luego trabajar con sus valores
-
+            let stats = {
+                percent: 0,
+                exercises: {
+                    total: 0,
+                    completed: 0,
+                    percent: 0
+                },
+                reads: {
+                    total: 0,
+                    completed: 0,
+                    percent: 0
+                },
+                quizzes: {
+                    total: 0,
+                    completed: 0,
+                    percent: 0,
+                    scoreSum: 0,
+                    scoreAvg: 0
+                }
+             };
             //map
 
-            let stats = {
-               percent: progress[id][courses[0]].percent
-            };
-            
+            stats.percent = progress[id][courses[0]].percent;
+            console.log(stats.percent);
         }
+        
     );
 }
 //loadStats();
