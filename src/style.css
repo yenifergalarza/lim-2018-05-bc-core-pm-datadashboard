@@ -28,8 +28,7 @@
   
  
  }
- select{align-items: center;}
- .vistaclick{padding-left:0px;}
+ 
  
  p{   margin: 0;
     padding: 0;
@@ -53,7 +52,7 @@
   
   nav {
     flex: 1 1 auto;
-    margin-top: 5px;
+    margin-top:5.1%;
     padding: 0;
     padding-top: 12px;
     padding-bottom: 12px;
@@ -81,7 +80,7 @@
      align-content: center;
     
     }
-    .botoncurso {
+    .buttonCourse {
         min-width: 104px;
         min-height: 92px;
         background-image: url(curso.svg);
@@ -101,8 +100,10 @@
         padding-top: 95px;
         padding-bottom: 12px;
         padding-left: 5px;
-        padding-right: 5px;}
- .botonalumna {
+        padding-right: 5px;
+    }
+
+ .buttonStudent {
     margin-left: 5px;
     margin-right: 4px;
     margin-top: 10px;
@@ -129,9 +130,10 @@
  
  .headerstyle{
  
-    margin: 20px center;
- 
-    border:10px;
+    width: calc(100% - 300px);
+    flex: 0 1 auto;
+    display: flex;
+    align-items: center;
     
   }
  .filtros{
@@ -154,12 +156,12 @@
     display: flex;
     align-items: center;
  }
-    .botonnav{
-        margin-top: 1px;
+.buttonNav{
+    margin-top: 1px;
     margin-left: 20px;
     margin-bottom: 6px;
-    min-width: 5%;
-    min-height: 2px;
+    min-width: 60px;
+    min-height: 57px;
     background-image: url(listaboton.svg);
     background-size: 45px;
     background-position-x: 11px;
@@ -172,6 +174,4 @@
     border-radius: 20px;
     border: #f3a8a881;
     cursor: pointer;
- Entrada de mensaje
- 
- Enviar mensaje a @Yenifer galarza
+}
