@@ -112,13 +112,18 @@ luego avanzamos con el diseño de la pagina ,el header originalmente fue negro
 
 ![capturabarra](https://user-images.githubusercontent.com/39390011/41674197-e88b293e-7484-11e8-8149-56fc3371fcc7.PNG)
 
-pero ahora elegimos el caracteristico color amarillo de la marca
-:
-ademas en la barra de navegacion que originalmente era amarilla 
+pero ahora elegimos el caracteristico color amarillo de la marca:
+
+![nav amarilo](https://user-images.githubusercontent.com/39390011/41790252-85c191aa-7617-11e8-8312-988344246f5e.PNG)
+
+ademas en la barra de navegacion que originalmente era amarilla :
 
 ![capturanav](https://user-images.githubusercontent.com/39390011/41674279-2aa4721c-7485-11e8-8808-aa5284d8f6cc.PNG)
 
 decidimos invertir el orden de los colores,ahora esta barra sera negra:
+
+![barra black](https://user-images.githubusercontent.com/39390011/41790248-836598ac-7617-11e8-9fa1-ce73e128250e.PNG)
+
 
 ### Entrevistas📝
 Hicimos 2 entrevistas en la primera presentamos un bosquejo de la pagina:
