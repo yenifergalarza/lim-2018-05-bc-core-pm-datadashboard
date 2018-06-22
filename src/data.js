@@ -1,21 +1,79 @@
-const processCohortData = (options) => {
-    cohorts.map(
-        (cohort) => {
-            let options = {
-                cohort: {},
-                cohortData: {
-                    user: [],
-                    progress: {}
-                },
-                orderBy: '',
-                orderDirection: '',
-                search: ''
-            };
+const sortUsers = (users, orderBy, orderDirection) => {
+    users.sort((a, b)  => {
+        let variable1;
+        let variable2;
 
+        switch(orderBy){
+            case 'name': 
+                variable1 = a.name;
+                variable2 = b.name;
+                break;
+            case 'percent': 
+                if(a.hasOwnProperty('stats')){
+                    variable1 = a.stats.percent;
+                }
+                if(b.hasOwnProperty('stats')){
+                    variable2 = b.stats.percent;
+                }
+                break;
+            case 'exercisesPercent': 
+                if(a.hasOwnProperty('stats')){
+                    variable1 = a.stats.exercises.percent;
+                }
+                if(b.hasOwnProperty('stats')){
+                    variable2 = b.stats.exercises.percent;
+                }
+                break; 
+            case 'quizzesPercent': 
+                if(a.hasOwnProperty('stats')){
+                    variable1 = a.stats.quizzes.percent;
+                }
+                if(b.hasOwnProperty('stats')){
+                    variable2 = b.stats.quizzes.percent;
+                }
+                break; 
+            case 'quizzesScoreAvg': 
+                if(a.hasOwnProperty('stats')){
+                    variable1 = a.stats.quizzes.scoreAvg;
+                }
+                if(b.hasOwnProperty('stats')){
+                    variable2 = b.stats.quizzes.scoreAvg;
+                }
+                break; 
+            case 'readsPercent': 
+                if(a.hasOwnProperty('stats')){
+                    variable1 = a.stats.reads.percent;
+                }
+                if(b.hasOwnProperty('stats')){
+                    variable2 = b.stats.reads.percent;
+                }
+                break;          
         }
-    );
-    
+
+        if(orderDirection == 'ASC'){
+            if (variable1 > variable2) {
+                return 1;
+            }
+            if (variable1 < variable2) {
+                return -1;
+            }
+        }
+        else if (orderDirection == 'DESC'){
+            if (variable2 > variable1) {
+                return 1;
+            }
+            if (variable2 < variable1) {
+                return -1;
+            }
+        }
+        else{
+            return 0;
+        }
+     });
+
+    return users;
 }
+
 const computeUsersStats = (users, progress, courses) => {
 
      let usersWithStats = users.map(
@@ -107,11 +165,26 @@ const computeUsersStats = (users, progress, courses) => {
             } 
             return user;   
         } 
-        
     );
-
-    console.log(usersWithStats);
     return usersWithStats;
 }
 
-//loadStats();
+const processCohortData = (options) => {
+    cohorts.map(
+        (cohort) => {
+            let options = {
+                cohort: {},
+                cohortData: {
+                    user: [],
+                    progress: {}
+                },
+                orderBy: '',
+                orderDirection: '',
+                search: ''
+            };
+
+        }
+    );
+    
+}
+

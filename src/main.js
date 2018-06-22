@@ -7,7 +7,8 @@ let cohorts = [];
 let progress = [];
 let users = [];
 
-const loadStats = () => {
+//parametros por defecto: en caso de llamar a la funcion sin enviar parametros, usará los valores por defecto
+const loadStats = (orderBy = 'name', orderDirection = 'ASC') => {
     //Promise.all espera que todos los fetch terminen
     Promise.all(
         urls.map(
@@ -46,43 +47,62 @@ const loadStats = () => {
                 user => user.role == 'student'
             );
 
-            //console.log(courses);
             let usersWithStats = computeUsersStats(students, progress, courses);
+            /*
+                filtros:
+                - name -> nombre
+                - percent -> porcentaje de completitud total
+                - exercisesPercent -> porcentaje de ejercicios autocorregidos completados 
+                - quizzesPercent -> porcentaje de quizzes completados
+                - quizzesScoreAvg -> puntuación promedio en quizzes completados
+                - readsPercent -> porcentaje de lecturas completadas
+            */
+            let sortUsersWithStats = sortUsers(usersWithStats, orderBy, orderDirection);
 
             listStudents.innerHTML = '';
-            usersWithStats.map(
+            sortUsersWithStats.map(
                 userWithStats => {
                     const row = document.createElement('tr');
                     
                     const cellName = document.createElement('td');
-                    const cellTotal = document.createElement('td');
-                    const cellCompleted = document.createElement('td');
                     const cellPercent = document.createElement('td');
 
+                    const cellTotalExercises = document.createElement('td');
+                    const cellCompletedExercises = document.createElement('td');
+                    const cellPercentExercises = document.createElement('td');
+
                     const name = document.createTextNode(userWithStats.name);
-                    let total;
-                    let completed;
+
                     let percent;
+
+                    let totalExercises;
+                    let completedExercises;
+                    let percentExercises;
+
                     if(userWithStats.hasOwnProperty('stats')){
-                        total = document.createTextNode(userWithStats.stats.exercises.total);
-                        completed = document.createTextNode(userWithStats.stats.exercises.completed);
-                        percent = document.createTextNode(userWithStats.stats.exercises.percent);
+                        percent = document.createTextNode(userWithStats.stats.percent);
+                        totalExercises = document.createTextNode(userWithStats.stats.exercises.total);
+                        completedExercises = document.createTextNode(userWithStats.stats.exercises.completed);
+                        percentExercises = document.createTextNode(userWithStats.stats.exercises.percent);
                     }
                     else{
-                        total = document.createTextNode('---');
-                        completed = document.createTextNode('---');
-                        percent = document.createTextNode('---'); 
+                        percent = document.createTextNode('---');
+                        totalExercises = document.createTextNode('---');
+                        completedExercises = document.createTextNode('---');
+                        percentExercises = document.createTextNode('---'); 
                     }
         
                     cellName.appendChild(name);
-                    cellTotal.appendChild(total);
-                    cellCompleted.appendChild(completed);
                     cellPercent.appendChild(percent);
+                    cellTotalExercises.appendChild(totalExercises);
+                    cellCompletedExercises.appendChild(completedExercises);
+                    cellPercentExercises.appendChild(percentExercises);
 
                     row.appendChild(cellName);
-                    row.appendChild(cellTotal);
-                    row.appendChild(cellCompleted);
                     row.appendChild(cellPercent);
+                    row.appendChild(cellTotalExercises);
+                    row.appendChild(cellCompletedExercises);
+                    row.appendChild(cellPercentExercises);
 
                     listStudents.appendChild(row);
                 }
@@ -97,13 +117,21 @@ const loadStats = () => {
 
 const listStudents = document.getElementById('listStudents');
 const botonAlumna = document.getElementById('botonalumna');
+//ordenar
+const orderBy = document.getElementById('orderBy');
+const orderDirection = document.getElementById('orderDirection');
+const buttonSort = document.getElementById('sort');
+
 //Aqui llamo a mi funcion para que se ejecute
 botonAlumna.addEventListener('click', () => {
-    loadStats();
-    
+    loadStats(); //usara parametros por defecto
 });
 
-const loadStudents = () => {
+buttonSort.addEventListener('click', () => {
+    loadStats(orderBy.value, orderDirection.value); //usara los value de los select
+});
+
+/*const loadStudents = () => {
     //Promise.all espera que todos los fetch terminen
     Promise.all(
         urls.map(
@@ -129,9 +157,9 @@ const loadStudents = () => {
                 //user => user.role == 'student'
                 user => user.role == selectUsers.value
             );
-            /* console.log(users);
-            console.log(students);
-            console.log(progress['DH6NiODCdYM9ick0YQLf54cfHMv2']); */
+            //console.log(users);
+            //console.log(students);
+            //console.log(progress['DH6NiODCdYM9ick0YQLf54cfHMv2']);
             infoAlumnas.innerHTML = '';
             students.map(
                 student => {
@@ -153,4 +181,4 @@ const loadStudents = () => {
             );
         }
     );
-}
+}*/

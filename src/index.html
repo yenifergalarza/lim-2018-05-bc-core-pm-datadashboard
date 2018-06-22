@@ -32,12 +32,35 @@
    </nav>
  </ul>
  
-    <main >
-     <table id="students">
+    <main>
+      <label>Ordenar por:</label>
+
+      <select id="orderBy">
+        <option value="name">Nombre</option>
+        <option value="percent">Porcentaje de completitud total</option>
+        <option value="exercisesPercent">Porcentaje de ejercicios autocorregidos completados</option>
+        <option value="quizzesPercent">Porcentaje de quizzes completados</option>
+        <option value="quizzesScoreAvg">Puntuación promedio en quizzes completados</option>
+        <option value="readsPercent">Porcentaje de lecturas completadas</option>
+      </select>
+
+      <select id="orderDirection">
+        <option value="ASC">Ascendente</option>
+        <option value="DESC">Descendente</option>
+      </select>
+
+      <button id="sort">Ordenar</button>
+
+      <br><br>
+
+      <table id="students">
        <thead>
          <tr>
-           <th>Id</th>
            <th>Nombre</th>
+           <th>% completitud</th>
+           <th>Total Ejercicios</th>
+           <th>Completitud Ejercicios</th>
+           <th>% Completitud Ejercicios</th>
          </tr>
        </thead>
        <tbody id="listStudents">
