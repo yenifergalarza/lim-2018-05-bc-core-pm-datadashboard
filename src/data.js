@@ -1,152 +1,77 @@
-const fileCohort = '../data/cohorts.json';
-const fileProgress = '../data/cohorts/lim-2018-03-pre-core-pw/progress.json';
-const fileUsers = '../data/cohorts/lim-2018-03-pre-core-pw/users.json';
+const sortUsers = (users, orderBy, orderDirection) => {
+    users.sort((a, b)  => {
+        let variable1;
+        let variable2;
 
-const urls = [fileCohort, fileProgress, fileUsers];
-let cohorts = [];
-let progress = [];
-let users = [];
-
-const loadStudents = () => {
-    //Promise.all espera que todos los fetch terminen
-    Promise.all(
-        urls.map(
-            url => fetch(url)
-        )
-    )
-    .then(
-        //Convertir la data recibida de los tres fetch a texto
-        response => Promise.all(
-            response.map(
-                data => data.text()
-            )
-        )
-    )
-    .then(
-        //Utilizamos la data de la forma deseada
-        response => {
-            cohorts = JSON.parse(response[0]); //convierte de texto a objecto JSON
-            progress = JSON.parse(response[1]);
-            users = JSON.parse(response[2]);
-
-            let students = users.filter(
-                //user => user.role == 'student'
-                user => user.role == selectUsers.value
-            );
-            /* console.log(users);
-            console.log(students);
-            console.log(progress['DH6NiODCdYM9ick0YQLf54cfHMv2']); */
-            infoAlumnas.innerHTML = '';
-            students.map(
-                student => {
-                    const row = document.createElement('tr');
-                    const cellId = document.createElement('td');
-                    const cellName = document.createElement('td');
-
-                    const id = document.createTextNode(student.id);
-                    const name = document.createTextNode(student.name);
-        
-                    cellId.appendChild(id);
-                    cellName.appendChild(name);
-
-                    row.appendChild(cellId);
-                    row.appendChild(cellName);
-
-                    listStudents.appendChild(row);
+        switch(orderBy){
+            case 'name': 
+                variable1 = a.name;
+                variable2 = b.name;
+                break;
+            case 'percent': 
+                if(a.hasOwnProperty('stats')){
+                    variable1 = a.stats.percent;
                 }
-            );
+                if(b.hasOwnProperty('stats')){
+                    variable2 = b.stats.percent;
+                }
+                break;
+            case 'exercisesPercent': 
+                if(a.hasOwnProperty('stats')){
+                    variable1 = a.stats.exercises.percent;
+                }
+                if(b.hasOwnProperty('stats')){
+                    variable2 = b.stats.exercises.percent;
+                }
+                break; 
+            case 'quizzesPercent': 
+                if(a.hasOwnProperty('stats')){
+                    variable1 = a.stats.quizzes.percent;
+                }
+                if(b.hasOwnProperty('stats')){
+                    variable2 = b.stats.quizzes.percent;
+                }
+                break; 
+            case 'quizzesScoreAvg': 
+                if(a.hasOwnProperty('stats')){
+                    variable1 = a.stats.quizzes.scoreAvg;
+                }
+                if(b.hasOwnProperty('stats')){
+                    variable2 = b.stats.quizzes.scoreAvg;
+                }
+                break; 
+            case 'readsPercent': 
+                if(a.hasOwnProperty('stats')){
+                    variable1 = a.stats.reads.percent;
+                }
+                if(b.hasOwnProperty('stats')){
+                    variable2 = b.stats.reads.percent;
+                }
+                break;          
         }
-    );
-}
 
-
-
-const loadStats = () => {
-    //Promise.all espera que todos los fetch terminen
-    Promise.all(
-        urls.map(
-            url => fetch(url)
-        )
-    )
-    .then(
-        //Convertir la data recibida de los tres fetch a texto
-        response => Promise.all(
-            response.map(
-                data => data.text()
-            )
-        )
-    )
-    .then(
-        //Utilizamos la data de la forma deseada
-        response => {
-            cohorts = JSON.parse(response[0]);
-            progress = JSON.parse(response[1]);
-            users = JSON.parse(response[2]);
-
-            let courses = [];
-
-            cohorts.map(
-                cohort => {
-                    if(cohort.id == 'lim-2018-03-pre-core-pw'){
-                        //courses.push(cohort.coursesIndex);
-                        for(key in cohort.coursesIndex){
-                            courses.push(key);
-                        }
-                    }
-                }
-            );
-
-            let students = users.filter(
-                user => user.role == 'student'
-            );
-
-            //console.log(courses);
-            let usersWithStats = computeUsersStats(students, progress, courses);
-
-            listStudents.innerHTML = '';
-            usersWithStats.map(
-                userWithStats => {
-                    const row = document.createElement('tr');
-                    
-                    const cellName = document.createElement('td');
-                    const cellTotal = document.createElement('td');
-                    const cellCompleted = document.createElement('td');
-                    const cellPercent = document.createElement('td');
-
-                    const name = document.createTextNode(userWithStats.name);
-                    let total;
-                    let completed;
-                    let percent;
-                    if(userWithStats.hasOwnProperty('stats')){
-                        total = document.createTextNode(userWithStats.stats.exercises.total);
-                        completed = document.createTextNode(userWithStats.stats.exercises.completed);
-                        percent = document.createTextNode(userWithStats.stats.exercises.percent);
-                    }
-                    else{
-                        total = document.createTextNode('---');
-                        completed = document.createTextNode('---');
-                        percent = document.createTextNode('---'); 
-                    }
-        
-                    cellName.appendChild(name);
-                    cellTotal.appendChild(total);
-                    cellCompleted.appendChild(completed);
-                    cellPercent.appendChild(percent);
-
-                    row.appendChild(cellName);
-                    row.appendChild(cellTotal);
-                    row.appendChild(cellCompleted);
-                    row.appendChild(cellPercent);
-
-                    listStudents.appendChild(row);
-                }
-            );
+        if(orderDirection == 'ASC'){
+            if (variable1 > variable2) {
+                return 1;
+            }
+            if (variable1 < variable2) {
+                return -1;
+            }
         }
-    )
-    .catch((err) => {
-        // algo salió mal...
-        console.error(err)
-    });
+        else if (orderDirection == 'DESC'){
+            if (variable2 > variable1) {
+                return 1;
+            }
+            if (variable2 < variable1) {
+                return -1;
+            }
+        }
+        else{
+            return 0;
+        }
+     });
+
+    return users;
 }
 
 const computeUsersStats = (users, progress, courses) => {
@@ -240,11 +165,26 @@ const computeUsersStats = (users, progress, courses) => {
             } 
             return user;   
         } 
-        
     );
-
-    console.log(usersWithStats);
     return usersWithStats;
 }
 
-//loadStats();
+const processCohortData = (options) => {
+    cohorts.map(
+        (cohort) => {
+            let options = {
+                cohort: {},
+                cohortData: {
+                    user: [],
+                    progress: {}
+                },
+                orderBy: '',
+                orderDirection: '',
+                search: ''
+            };
+
+        }
+    );
+    
+}
+
