@@ -6,7 +6,6 @@ function yes() {
   var x = document.getElementById('oculto');
   if (x.style.display === "block") {
     x.style.display = "none";
-
   } else {
     x.style.display = "block";
   }
@@ -43,28 +42,21 @@ fetch('../data/cohorts.json')
   .catch((err) => {
     // algo salió mal...
     console.error("failed", err);
-
   });
-
-
 const buttonAddClass = document.getElementById("styleWhenClickHtml");
 const styleChange = document.getElementById("styleChangeHtml");
-
 buttonAddClass.addEventListener('click',() => {
   styleChange.classList.add('class2');
   styleChange.classList.remove('class1');
  
 });
-
 const fileCohort = '../data/cohorts.json';
 const fileProgress = '../data/cohorts/lim-2018-03-pre-core-pw/progress.json';
 const fileUsers = '../data/cohorts/lim-2018-03-pre-core-pw/users.json';
-
 const urls = [fileCohort, fileProgress, fileUsers];
 let cohorts = [];
 let progress = [];
 let users = [];
-
 //parametros por defecto: en caso de llamar a la funcion sin enviar parametros, usará los valores por defecto
 const loadStats = (orderBy = 'name', orderDirection = 'ASC') => {
     //Promise.all espera que todos los fetch terminen
@@ -87,9 +79,7 @@ const loadStats = (orderBy = 'name', orderDirection = 'ASC') => {
             cohorts = JSON.parse(response[0]);
             progress = JSON.parse(response[1]);
             users = JSON.parse(response[2]);
-
             let courses = [];
-
             cohorts.map(
                 cohort => {
                     if(cohort.id == 'lim-2018-03-pre-core-pw'){
@@ -100,11 +90,9 @@ const loadStats = (orderBy = 'name', orderDirection = 'ASC') => {
                     }
                 }
             );
-
             let students = users.filter(
                 user => user.role == 'student'
             );
-
             let usersWithStats = computeUsersStats(students, progress, courses);
             /*
                 filtros:
@@ -116,7 +104,6 @@ const loadStats = (orderBy = 'name', orderDirection = 'ASC') => {
                 - readsPercent -> porcentaje de lecturas completadas
             */
             let sortUsersWithStats = sortUsers(usersWithStats, orderBy, orderDirection);
-
             listStudents.innerHTML = '';
             sortUsersWithStats.map(
                 userWithStats => {
@@ -124,19 +111,14 @@ const loadStats = (orderBy = 'name', orderDirection = 'ASC') => {
                     
                     const cellName = document.createElement('td');
                     const cellPercent = document.createElement('td');
-
                     const cellTotalExercises = document.createElement('td');
                     const cellCompletedExercises = document.createElement('td');
                     const cellPercentExercises = document.createElement('td');
-
                     const name = document.createTextNode(userWithStats.name);
-
                     let percent;
-
                     let totalExercises;
                     let completedExercises;
                     let percentExercises;
-
                     if(userWithStats.hasOwnProperty('stats')){
                         percent = document.createTextNode(userWithStats.stats.percent);
                         totalExercises = document.createTextNode(userWithStats.stats.exercises.total);
@@ -155,13 +137,11 @@ const loadStats = (orderBy = 'name', orderDirection = 'ASC') => {
                     cellTotalExercises.appendChild(totalExercises);
                     cellCompletedExercises.appendChild(completedExercises);
                     cellPercentExercises.appendChild(percentExercises);
-
                     row.appendChild(cellName);
                     row.appendChild(cellPercent);
                     row.appendChild(cellTotalExercises);
                     row.appendChild(cellCompletedExercises);
                     row.appendChild(cellPercentExercises);
-
                     listStudents.appendChild(row);
                 }
             );
@@ -172,23 +152,19 @@ const loadStats = (orderBy = 'name', orderDirection = 'ASC') => {
         console.error(err)
     });
 }
-
 const listStudents = document.getElementById('listStudents');
 const botonAlumna = document.getElementById('botonalumna');
 //ordenar
 const orderBy = document.getElementById('orderBy');
 const orderDirection = document.getElementById('orderDirection');
 const buttonSort = document.getElementById('sort');
-
 //Aqui llamo a mi funcion para que se ejecute
 botonAlumna.addEventListener('click', () => {
     loadStats(); //usara parametros por defecto
 });
-
 buttonSort.addEventListener('click', () => {
     loadStats(orderBy.value, orderDirection.value); //usara los value de los select
 });
-
 /*const loadStudents = () => {
     //Promise.all espera que todos los fetch terminen
     Promise.all(
