@@ -43,6 +43,7 @@ fetch('../data/cohorts.json')
     // algo salió mal...
     console.error("failed", err);
   });
+  //Hace que el menu  lateral aparezca y desaparezca
 const buttonAddClass = document.getElementById("styleWhenClickHtml");
 const styleChange = document.getElementById("styleChangeHtml");
 buttonAddClass.addEventListener('click',() => {
@@ -152,6 +153,7 @@ const loadStats = (orderBy = 'name', orderDirection = 'ASC') => {
         console.error(err)
     });
 }
+const selectCohorts = document.getElementById('cohorts');
 const listStudents = document.getElementById('listStudents');
 const botonAlumna = document.getElementById('botonalumna');
 //ordenar
@@ -165,6 +167,27 @@ botonAlumna.addEventListener('click', () => {
 buttonSort.addEventListener('click', () => {
     loadStats(orderBy.value, orderDirection.value); //usara los value de los select
 });
+
+selectCohorts.addEventListener('change', () => {
+     //usara los value de los select
+     cohorts.map(
+        (cohort) => {
+            let options = {
+                cohort: {},
+                cohortData: {
+                    user: [],
+                    progress: {}
+                },
+                orderBy: '',
+                orderDirection: '',
+                search: ''
+            };
+
+
+        }
+    );
+});
+
 /*const loadStudents = () => {
     //Promise.all espera que todos los fetch terminen
     Promise.all(

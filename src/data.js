@@ -170,20 +170,5 @@ const computeUsersStats = (users, progress, courses) => {
 }
 
 const processCohortData = (options) => {
-    cohorts.map(
-        (cohort) => {
-            let options = {
-                cohort: {},
-                cohortData: {
-                    user: [],
-                    progress: {}
-                },
-                orderBy: '',
-                orderDirection: '',
-                search: ''
-            };
-
-        }
-    );
     
 }
