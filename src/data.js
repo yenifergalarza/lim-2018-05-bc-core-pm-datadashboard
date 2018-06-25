@@ -187,4 +187,3 @@ const processCohortData = (options) => {
     );
     
 }
-

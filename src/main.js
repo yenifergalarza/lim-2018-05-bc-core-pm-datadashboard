@@ -152,7 +152,10 @@ buttonSort.addEventListener('click', () => {
             cohorts = JSON.parse(response[0]); //convierte de texto a objecto JSON
             progress = JSON.parse(response[1]);
             users = JSON.parse(response[2]);
+<<<<<<< HEAD
 
+=======
+>>>>>>> 42fc5bd9c298de02955db8a23b29b092612ca5c9
             let students = users.filter(
                 //user => user.role == 'student'
                 user => user.role == selectUsers.value
@@ -166,16 +169,24 @@ buttonSort.addEventListener('click', () => {
                     const row = document.createElement('tr');
                     const cellId = document.createElement('td');
                     const cellName = document.createElement('td');
+<<<<<<< HEAD
 
+=======
+>>>>>>> 42fc5bd9c298de02955db8a23b29b092612ca5c9
                     const id = document.createTextNode(student.id);
                     const name = document.createTextNode(student.name);
         
                     cellId.appendChild(id);
                     cellName.appendChild(name);
+<<<<<<< HEAD
 
                     row.appendChild(cellId);
                     row.appendChild(cellName);
 
+=======
+                    row.appendChild(cellId);
+                    row.appendChild(cellName);
+>>>>>>> 42fc5bd9c298de02955db8a23b29b092612ca5c9
                     listStudents.appendChild(row);
                 }
             );
