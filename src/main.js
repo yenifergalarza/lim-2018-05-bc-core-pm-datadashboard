@@ -28,7 +28,7 @@ fetch('../data/cohorts.json')
       //a la etiqueta padre le doy su hijo
       optionElements.appendChild(contenidoOption);
       optionElements.value = sedes[i].id
-      console.log(sedes[i].id);
+      //console.log(sedes[i].id);
       selectElement.appendChild(optionElements);
     }
     //cuando detecte el cambio de esa selecion mediante ese evento escondera un div accediendo mediante el id
@@ -70,6 +70,7 @@ const buttonSort = document.getElementById('sort');
 //Aqui llamo a mi funcion para que se ejecute
 botonAlumna.addEventListener('click', () => {
     //loadStats(); //usara parametros por defecto
+    processCohortData();
 });
 buttonSort.addEventListener('click', () => {
     //loadStats(orderBy.value, orderDirection.value); //usara los value de los select
@@ -98,7 +99,7 @@ selectElement.addEventListener('change', () => {
             
             //usara los value de los select
             let options = {
-                cohort: {},
+                cohort: '',
                 cohortData: {
                     users: {},
                     progress: {}
@@ -108,7 +109,7 @@ selectElement.addEventListener('change', () => {
                 search: ''
             };
 
-            options.cohort = cohorts;
+            options.cohort = selectElement.value;
             options.cohortData.users = users;
             options.cohortData.progress = progress;
             options.orderBy = orderBy.value;
@@ -160,6 +161,7 @@ selectElement.addEventListener('change', () => {
     );
      
 });
+
 
 
 /*const loadStats = (orderBy = 'name', orderDirection = 'ASC') => {
