@@ -170,5 +170,35 @@ const computeUsersStats = (users, progress, courses) => {
 }
 
 const processCohortData = (options) => {
-    
+    /*
+    - options: Un objeto con las siguientes propiedades:
+        - cohort: Objeto cohort (de la lista de cohorts)
+        - cohortData: Objeto con dos propiedades:
+            - users: Arreglo de usuarios miembros del cohort.
+            - progress: Objeto con data de progreso de cada usuario en el contexto de un cohort en particular.
+        - orderBy: String con criterio de ordenado (ver sortUsers).
+        - orderDirection: String con dirección de ordenado (ver sortUsers).
+        - search: String de búsqueda (ver filterUsers)
+    */
+
+   let courses = [];
+   options.cohort.map(
+       cohort => {
+           if(cohort.id == selectElement.value){
+               for(key in cohort.coursesIndex){
+                   courses.push(key);
+               }
+           }
+       }
+   );
+   let students = options.cohortData.users.filter(
+       user => user.role == 'student'
+   );
+
+   let usersWithStats = computeUsersStats(students, options.cohortData.progress, courses);
+   let sortUsersWithStats = sortUsers(usersWithStats, options.orderBy, options.orderDirection);
+   //Llamar a la 3ra funcion
+
+   return sortUsersWithStats;
+
 }
