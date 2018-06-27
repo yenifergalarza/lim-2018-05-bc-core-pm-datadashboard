@@ -204,4 +204,35 @@ td {
     border-top: 1px solid transparent; }
 tr:hover td { 
   background: #d0dafd;
-   color: #FF009E; }
+  color: #FF009E; 
+}
+
+/*tamaños mayores a 1200px usan el estilo normal*/
+
+/*tamaños hasta 1200px*/
+@media (max-width: 1200px) {
+  body {
+    background-color: yellow;
+  }
+}
+
+/*tamaños hasta 992px*/
+@media (max-width: 992px) {
+  body {
+    background-color: green;
+  }
+}
+
+/*tamaños hasta 768px*/
+@media (max-width: 768px) {
+  body {
+    background-color: blue;
+  }
+}
+
+/*tamaños hasta 576px*/
+@media (max-width: 576px) { 
+  body {
+    background-color: red;
+  }
+}

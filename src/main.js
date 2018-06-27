@@ -109,7 +109,13 @@ selectElement.addEventListener('change', () => {
                 search: ''
             };
 
-            options.cohort = selectElement.value;
+            idCohort = selectElement.value; //value del select cohorts
+
+            let selectedCohort = cohorts.filter(
+                cohort => cohort.id == idCohort
+            );
+
+            options.cohort = selectedCohort; //objeto del cohort seleccionado
             options.cohortData.users = users;
             options.cohortData.progress = progress;
             options.orderBy = orderBy.value;

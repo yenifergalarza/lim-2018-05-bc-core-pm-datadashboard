@@ -181,19 +181,14 @@ const processCohortData = (options) => {
         - search: String de búsqueda (ver filterUsers)
     */
 
-   let courses = [];
-   options.cohort.map(
-       cohort => {
-           if(cohort.id == selectElement.value){
-               for(key in cohort.coursesIndex){
-                   courses.push(key);
-               }
-           }
-       }
-   );
-   let students = options.cohortData.users.filter(
-       user => user.role == 'student'
-   );
+    let courses = [];
+    for(key in options.cohort[0].coursesIndex){
+        courses.push(key);
+    }
+
+    let students = options.cohortData.users.filter(
+        user => user.role == 'student'
+    );
 
    let usersWithStats = computeUsersStats(students, options.cohortData.progress, courses);
    let sortUsersWithStats = sortUsers(usersWithStats, options.orderBy, options.orderDirection);
