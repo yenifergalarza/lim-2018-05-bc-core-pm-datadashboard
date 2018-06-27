@@ -125,42 +125,34 @@ selectElement.addEventListener('change', () => {
             listStudents.innerHTML = '';
             data.map(
                 userWithStats => {
-                    const row = document.createElement('tr');
-                    
-                    const cellName = document.createElement('td');
-                    const cellPercent = document.createElement('td');
-                    const cellTotalExercises = document.createElement('td');
-                    const cellCompletedExercises = document.createElement('td');
-                    const cellPercentExercises = document.createElement('td');
                     const name = document.createTextNode(userWithStats.name);
+                    let divTarget = document.createElement('div');
                     let percent;
-                    let totalExercises;
-                    let completedExercises;
                     let percentExercises;
+                    let percentQuizzes;
+                    let scoreAvgQuizzes;
+                    let percentReads;
                     if(userWithStats.hasOwnProperty('stats')){
                         percent = document.createTextNode(userWithStats.stats.percent);
-                        totalExercises = document.createTextNode(userWithStats.stats.exercises.total);
-                        completedExercises = document.createTextNode(userWithStats.stats.exercises.completed);
                         percentExercises = document.createTextNode(userWithStats.stats.exercises.percent);
+                        percentQuizzes = document.createTextNode(userWithStats.stats.quizzes.percent);
+                        scoreAvgQuizzes = document.createTextNode(userWithStats.stats.quizzes.scoreAvg);
+                        percentReads = document.createTextNode(userWithStats.stats.reads.percent);
                     }
                     else{
                         percent = document.createTextNode('---');
-                        totalExercises = document.createTextNode('---');
-                        completedExercises = document.createTextNode('---');
-                        percentExercises = document.createTextNode('---'); 
+                        percentExercises = document.createTextNode('---');
+                        percentQuizzes = document.createTextNode('---');
+                        scoreAvgQuizzes = document.createTextNode('---');
+                        percentReads = document.createTextNode('---'); 
                     }
         
-                    cellName.appendChild(name);
-                    cellPercent.appendChild(percent);
-                    cellTotalExercises.appendChild(totalExercises);
-                    cellCompletedExercises.appendChild(completedExercises);
-                    cellPercentExercises.appendChild(percentExercises);
-                    row.appendChild(cellName);
-                    row.appendChild(cellPercent);
-                    row.appendChild(cellTotalExercises);
-                    row.appendChild(cellCompletedExercises);
-                    row.appendChild(cellPercentExercises);
-                    listStudents.appendChild(row);
+                    listStudents.appendChild(name);
+                    listStudents.appendChild(percent);
+                    listStudents.appendChild(percentExercises);
+                    listStudents.appendChild(percentQuizzes);
+                    listStudents.appendChild(scoreAvgQuizzes);
+                    listStudents.appendChild(percentReads);
                 }
             );
         }    
