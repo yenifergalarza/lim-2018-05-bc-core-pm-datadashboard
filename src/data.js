@@ -11,7 +11,7 @@ const sortUsers = (users, orderBy, orderDirection) => {
             case 'percent': 
                 if(a.hasOwnProperty('stats')){
                     variable1 = a.stats.percent;
-                }
+                }c
                 if(b.hasOwnProperty('stats')){
                     variable2 = b.stats.percent;
                 }

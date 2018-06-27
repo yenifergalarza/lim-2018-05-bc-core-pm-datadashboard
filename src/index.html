@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+      <meta name="viewport">
     <meta charset="utf-8">
     <title>Data Dashboard</title>
     <link rel="stylesheet" href="style.css" />
@@ -19,7 +20,7 @@
         </section>
          
     </header>
-    <div id='oculto' style='display:block'>
+    <!-- <div id='oculto' style='display:block'>
     <nav >
         <ul class="espacioboton">
           <section class ="filtros"> <p class="text" >Filtros</p> </section>
@@ -31,12 +32,17 @@
       </section>
     </nav>
   </ul>
-  </div>
+  </div> -->
   <div id="styleChangeHtml" class="class1">
      <main >
        <div id="barra" >
-      cohorts_disponibles :<progress min="0" max="100" value="35" ></progress>
+      cohorts_disponibles :<progress min="0" max="100" value="53" ></progress>
        </div>
+       <form>
+          <input id="orderByfilter" autocomplete="off" type="text" >
+          <button type="submit" id="orderByfilterButton">buscar</button>
+        </form>
+
        <label>Ordenar por:</label>
 
        <select id="orderBy">

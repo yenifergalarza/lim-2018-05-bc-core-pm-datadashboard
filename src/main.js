@@ -55,6 +55,32 @@ buttonAddClass.addEventListener('click',() => {
   styleChange.classList.remove('class1');
  
 });
+const textInput = document.getElementById("orderByFilter");
+const buttonFilter= document.getElementById("orderByfilterButton");
+console.log(buttonFilter);
+let input = textInput.value;
+buttonFilter.addEventListener('click',hola= (e) => {
+    e.preventDefault();
+    
+    console.log(input.value);
+    //console.log(document.getElementById('orderByfilter').value);
+    //let text = textInput.value;
+    
+   
+     
+         users.filter((n) => {
+            return n.toLowerCase().indexOf(input.toLowerCase()) > -1;
+        
+        })
+        
+      
+
+ } );
+ console.log(hola())
+
+
+
+
 
 const fileCohort = '../data/cohorts.json';
 const fileProgress = '../data/cohorts/lim-2018-03-pre-core-pw/progress.json';
