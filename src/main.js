@@ -60,7 +60,7 @@ let progress = [];
 let users = [];
 //parametros por defecto: en caso de llamar a la funcion sin enviar parametros, usará los valores por defecto
 
-
+/* 
 const listStudents = document.getElementById('listStudents');
 const botonAlumna = document.getElementById('botonalumna');
 //ordenar
@@ -74,7 +74,7 @@ botonAlumna.addEventListener('click', () => {
 });
 buttonSort.addEventListener('click', () => {
     //loadStats(orderBy.value, orderDirection.value); //usara los value de los select
-});
+}); */
 
 selectElement.addEventListener('change', () => {
     
