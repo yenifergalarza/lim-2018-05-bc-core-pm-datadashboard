@@ -1,177 +1,238 @@
+/*añadido el extracto Texto simple: Sin título */
 *{
-    margin:0px;
-    padding: 0px;
-   font-family:  'open', sans-serif;
+  margin:0px;
+  padding: 0px;
+  font-family: 'open', sans-serif;
+}
+body{
+  margin: 0;
+  padding: 0;
+  background-color:#fafafa;
+}
+section{ display: flex;
+  flex-wrap: nowrap;
  }
- body{
-    margin: 0;
-    padding: 0;
- }
- section{ display: flex;
-    flex-wrap: nowrap;
- 
-  }
- header{
-    margin: 0;
-    padding: 0;
-    background-color: rgb(32, 30, 30);
-    top: 0;
-    left: auto;
-    right: 0;
-    position: fixed;
-    width: 100%;
-    height: 10.6%;
-    background-image: url(imagen/imagen1.png);
-    background-repeat: no-repeat;
-    background-size: 150px;
-    background-position-x: 95%;
+header{
+  margin: 0;
+  padding: 0;
+  background-color : #FFE521;
+  top: 0;
+  left: auto;
+  right: 0;
+  position: fixed;
+  width: 100%;
+  height: 10.6%;
+  background-image: url(imagen/flechasrosadas.png);
+  background-repeat: no-repeat;
+  background-size: 150px;
+  background-position-x: 95%;
   
- 
- }
- select{align-items: center;}
- .vistaclick{padding-left:0px;}
- 
- p{   margin: 0;
-    padding: 0;
-    
-    font-size: 1.3125rem;
-    font-weight: 700;
-    font-family: bitter, "Helvetica Neue", Arial, sans-serif;
-    line-height: 1.16667em;
-    
-  } 
+}
+select{align-items: center;}
+.vistaclick{padding-left:0px;}
+p{  margin: 0;
+  padding: 0;
+  
+  font-size: 1.3125rem;
+  font-weight: 700;
+  font-family: bitter, "Helvetica Neue", Arial, sans-serif;
+  line-height: 1.16667em;
+  
+ } 
  .text {color :white;}
-  
  
-      
-    .logo1{width: 250px;
-        height: 5%;
-    
  
-  }
    
+  .logo1{width: 250px;
+    height: 5%;
   
-  nav {
-    flex: 1 1 auto;
-    margin-top: 5px;
-    padding: 0;
-    padding-top: 12px;
-    padding-bottom: 12px;
-    padding-left: 16px;
-    padding-right: 16px;
-    background-color: #FFE521;
-    width: 113px;
-    height: 90%;
-    display: flex;
-    position: fixed;
-    box-sizing: border-box;
-    text-align: left;
-    justify-content: flex-start;
-    text-decoration: none;
-    padding-left: 0;
-    background-image: url(imagen/flechasrosadas.png);
-    background-repeat: no-repeat;
-    background-size: 112px;
-    background-position-y: 95%;
  }
-    article{
-        display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-     align-content: center;
-    
-    }
-    .botoncurso {
-        min-width: 104px;
-        min-height: 92px;
-        background-image: url(curso.svg);
-        background-size: 85px;
-        background-position-x: 12px;
-        background-position-y: 10px;
-        color: #0f0f0f;
-        font-family: Arial, Helvetica, sans-serif;
-        font-size: 20px;
-        background-repeat: no-repeat;
-        background-color: #ffffff81;
-        border-radius: 20px;
-        border: #ffffff81;
-        margin-left: 4px;
-        margin-right: 4px;
-        margin-top: 10px;
-        padding-top: 95px;
-        padding-bottom: 12px;
-        padding-left: 5px;
-        padding-right: 5px;}
- .botonalumna {
-    margin-left: 5px;
-    margin-right: 4px;
-    margin-top: 10px;
-    padding-top: 95px;
-    padding-bottom: 14px;
-    padding-left: 12px;
-    padding-right: 12px;
-    min-width: 90px;
-    min-height: 98px;
-    background-image: url(alumna.svg);
+  
+ 
+ nav {
+  flex: 1 1 auto;
+  padding: 0;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-left: 16px;
+  padding-right: 16px;
+  background-color: #FF009E ;
+  width: 113px;
+  height: 90%;
+  display: flex;
+  position: fixed;
+  box-sizing: border-box;
+  text-align: left;
+  justify-content: flex-start;
+  text-decoration: none;
+  padding-left: 0;
+  background-image: url(imagen/imagen1.png);
+  background-repeat: no-repeat;
+  background-size: 112px;
+  background-position-y: 95%;
+  margin-top: 6px;
+  
+}
+  article{
+    display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+   align-content: center;
+  
+  }
+  .botoncurso {
+    min-width: 104px;
+    min-height: 92px;
+    background-image: url(curso.svg);
     background-size: 85px;
-    background-position-x: 10px;
-    background-position-y: 7px;
-    color: black;
+    background-position-x: 12px;
+    background-position-y: 10px;
+    color: #0f0f0f;
     font-family: Arial, Helvetica, sans-serif;
-    background-repeat: no-repeat;
     font-size: 20px;
-    font-family: Arial, Helvetica, sans-serif;
+    background-repeat: no-repeat;
     background-color: #ffffff81;
     border-radius: 20px;
     border: #ffffff81;
+    margin-left: 4px;
+    margin-right: 4px;
+    margin-top: 10px;
+    padding-top: 95px;
+    padding-bottom: 12px;
+    padding-left: 5px;
+    padding-right: 5px;}
+#botonalumna {
+  margin-left: 5px;
+  margin-right: 4px;
+  margin-top: 10px;
+  padding-top: 95px;
+  padding-bottom: 14px;
+  padding-left: 12px;
+  padding-right: 12px;
+  min-width: 90px;
+  min-height: 98px;
+  background-image: url(alumna.svg);
+  background-size: 85px;
+  background-position-x: 10px;
+  background-position-y: 7px;
+  color: black;
+  font-family: Arial, Helvetica, sans-serif;
+  background-repeat: no-repeat;
+  font-size: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #ffffff81;
+  border-radius: 20px;
+  border: #ffffff81;
+}
+.headerstyle{
+  margin: 20px center;
+ 
+  border:10px;
+  
  }
- 
- 
- .headerstyle{
- 
-    margin: 20px center;
- 
-    border:10px;
-    
-  }
  .filtros{
-    padding-left: 17px;}
+  padding-left: 17px;}
  
  .flechitas{
-    display: flex;
-       float:right;
-       top:10px;
+  display: flex;
+    float:right;
+    top:10px;
+  }
+.class1{
+  
+  margin-top: 65px;
+  padding:4%;
+  padding-left:200px;
+}
+.class2{ 
+  margin-top: 65px;
+  padding:4%;
+  padding-left:0px;
+}
+div.sedes{
+  width: calc(100% - 300px);
+  flex: 0 1 auto;
+  display: flex;
+  align-items: center;
+}
+  .botonnav{
+    margin-top: 1px;
+  margin-left: 20px;
+  margin-bottom: 6px;
+  min-width: 5%;
+  min-height: 2px;
+  background-image: url(listaboton.svg);
+  background-size: 45px;
+  background-position-x: 11px;
+  background-position-y: 9px;
+  color: black;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1px;
+  background-repeat: no-repeat;
+  background-color: #ffffff81;
+  border-radius: 20px;
+  border: #f3a8a881;
+  cursor: pointer;}
+  table th {
+    
+    background-color: #FFE521;
    }
- #listadoAlumnas{
    
-    margin-top: 65px;
-    padding:4%;
-    padding-left:200px;
- }
- div.sedes{
-    width: calc(100% - 300px);
-    flex: 0 1 auto;
-    display: flex;
-    align-items: center;
- }
-    .botonnav{
-        margin-top: 1px;
-    margin-left: 20px;
-    margin-bottom: 6px;
-    min-width: 5%;
-    min-height: 2px;
-    background-image: url(listaboton.svg);
-    background-size: 45px;
-    background-position-x: 11px;
-    background-position-y: 9px;
-    color: black;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 1px;
-    background-repeat: no-repeat;
-    background-color: #ffffff81;
-    border-radius: 20px;
-    border: #f3a8a881;
-    cursor: pointer;
- Entrada de mensaje
- 
- Enviar mensaje a @Yenifer galarza
+   .students{
+     border-color: #0f0f0f
+   }
+   
+table {  
+   font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+  font-size: 12px; 
+   margin: 45px;  
+    width: 480px; text-align: left;  
+    border-collapse: collapse; }
+th {  
+   font-size: 13px;  
+   font-weight: normal;  
+    padding: 8px;
+      background: #f7f5f5;
+  border-top: 4px solid #030304; 
+    border-bottom: 1px solid #fff;
+    color: rgb(0, 0, 0); }
+td {  
+   padding: 8px; 
+    background: #f7f5f5;  
+     border-bottom: 1px solid #fff;
+  color: #0f0f0f; 
+    border-top: 1px solid transparent; }
+tr:hover td { 
+  background: #d0dafd;
+  color: #FF009E; 
+}
+
+/*tamaños mayores a 1200px usan el estilo normal*/
+
+/*tamaños hasta 1200px*/
+@media (max-width: 1200px) {
+  body {
+    background-color: yellow;
+  }
+}
+
+/*tamaños hasta 992px*/
+@media (max-width: 992px) {
+  body {
+    background-color: green;
+  }
+}
+
+/*tamaños hasta 768px*/
+@media (max-width: 768px) {
+  body {
+    background-color: blue;
+  }
+}
+
+/*tamaños hasta 576px*/
+@media (max-width: 576px) { 
+  body {
+    background-color: red;
+  }
+}
