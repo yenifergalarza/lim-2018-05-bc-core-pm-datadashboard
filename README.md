@@ -73,20 +73,6 @@ transporte, o simplemente los indicadores clave de tu propio emprendimiento ;)
 
 ## Decisiones de diseño🎨 
 
-* primero boceteamos,nuestras ideas hubieron 2 versiones,pero finalmente descartamos lo que no sirve y utilizamos lo que realmente es util para los usuarios 
-
-En la pagina numero 1 ,se pretende mostrar una version preliminar de la vista 1 que mostrara un porcentaje o promedio de todas las alumnas del cohort por curso
-
-![proto virg2](https://user-images.githubusercontent.com/39390011/41487242-7d287d16-70ad-11e8-9404-c95da88b61dc.jpg)
-
-En la pagina numero 2 ,se pretende mostrar una version preliminar de la vista 2 que mostrara un porcentaje o promedio de por alumna pero antes mostrara una tabla por orden de "merito"
-
-![proto virg1](https://user-images.githubusercontent.com/39390011/41487241-7ca32f08-70ad-11e8-941b-93edd7d96147.jpg)
-
-se pretende presentar una version de las 2 vistas juntas con graficas(barras ,dona) donde se espefica horas de trabajo,quizzes ,practices resueltos yexistentes por unidad
-
-![proto yeni](https://user-images.githubusercontent.com/39390011/41487240-7c7a2d74-70ad-11e8-90b3-602ea4418570.jpg)
-
 * tuvimos varias ideas respecto al color pero finalmente utilizamos los tonos de la marca y decidimos guiarnos de esos parametros
 
 ![logo](https://user-images.githubusercontent.com/39390011/41486589-bb145bf2-70aa-11e8-9db0-622c51b65dfa.png)
@@ -123,6 +109,10 @@ ademas en la barra de navegacion que originalmente era amarilla :
 decidimos invertir el orden de los colores,ahora esta barra sera negra:
 
 ![barra black](https://user-images.githubusercontent.com/39390011/41790248-836598ac-7617-11e8-9fa1-ce73e128250e.PNG)
+
+deidimos esconder momentaneamente la barra de navegacion ,llegaremos a un acuerdo respecto a ello
+
+![codigo del nav borrado](https://user-images.githubusercontent.com/39390011/42058024-a6ea3f68-7ae4-11e8-9f8c-4261498f4ce8.PNG)
 
 
 ### Entrevistas📝
@@ -162,8 +152,22 @@ Los trainning manager de cada sede 🌎 (lima,santiago,sao paulo,guadalajara y c
 
 #### 2) Sketch de la solución (prototipo de baja fidelidad)
 
-Debes hacer un _sketch_ (boceto) de tu solución usando papel y lápiz, tomarle
-una foto, subirla a tu repositorio y hacer mención del _sketch_ en tu `README.md`.
+* primero boceteamos,nuestras ideas hubieron 2 versiones,pero finalmente descartamos lo que no sirve y utilizamos lo que realmente es util para los usuarios 
+
+En la pagina numero 1 ,se pretende mostrar una version preliminar de la vista 1 que mostrara un porcentaje o promedio de todas las alumnas del cohort por curso
+
+![proto virg2](https://user-images.githubusercontent.com/39390011/41487242-7d287d16-70ad-11e8-9404-c95da88b61dc.jpg)
+
+En la pagina numero 2 ,se pretende mostrar una version preliminar de la vista 2 que mostrara un porcentaje o promedio de por alumna pero antes mostrara una tabla por orden de "merito"
+
+![proto virg1](https://user-images.githubusercontent.com/39390011/41487241-7ca32f08-70ad-11e8-941b-93edd7d96147.jpg)
+
+se pretende presentar una version de las 2 vistas juntas con graficas(barras ,dona) donde se espefica horas de trabajo,quizzes ,practices resueltos yexistentes por unidad
+
+![proto yeni](https://user-images.githubusercontent.com/39390011/41487240-7c7a2d74-70ad-11e8-90b3-602ea4418570.jpg)
+
+
+luego de acomodar nuestras ideas y tener claro que queremos hacer ,realizamos las vistas.
 
 * vista 1:
 
