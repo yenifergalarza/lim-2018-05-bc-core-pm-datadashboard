@@ -71,7 +71,7 @@ tocará crear un _data dashboard_. Quizás sea para visualizar la data de un
 negocio de delivery de comida, o las rutas históricas de un negocio de
 transporte, o simplemente los indicadores clave de tu propio emprendimiento ;)
 
-## Decisiones de diseño🎨 
+## Decisiones de diseño🎨 💡
 
 * tuvimos varias ideas respecto al color pero finalmente utilizamos los tonos de la marca y decidimos guiarnos de esos parametros
 
@@ -104,7 +104,7 @@ pusimos un prompt,el cual requiere que el usuario ponga sus datos
 
 ![promp pag](https://user-images.githubusercontent.com/39390011/42058008-a3bdd200-7ae4-11e8-9dec-dca342ff35aa.PNG)
 
-en nuestra version inicial ,todos los datos eran mostrados mediante una tabla 
+en nuestra version inicial ,todos los datos eran mostrados mediante una tabla 📅 
 
 ![version anterio](https://user-images.githubusercontent.com/39390011/42058010-a42d34ba-7ae4-11e8-9440-3e22c31516db.PNG)
 
@@ -113,7 +113,8 @@ en nuestra version inicial ,todos los datos eran mostrados mediante una tabla
 ![tabla descendente y nav oculto](https://user-images.githubusercontent.com/39390011/42058009-a3f4b39c-7ae4-11e8-8854-4876711e6b4f.gif)
 
 
-luego de contemplar los pro's y los contras de esta version decidimos crear otra version que mostraba los datos mediante cards,ya que la version previa tenia los datos de las alumnas organizado de tal forma que la pagina se veia saturada de informacion
+luego de contemplar los pro's y los contras de esta version decidimos crear otra version que mostraba los datos mediante cards📛 📄,ya que la version previa tenia los datos de las alumnas organizado de tal forma que la pagina se veia saturada de informacion
+
 ### Entrevistas📝
 Hicimos 2 entrevistas en la primera presentamos un bosquejo de la pagina:
 
@@ -143,13 +144,13 @@ Los trainning manager de cada sede 🌎 (lima,santiago,sao paulo,guadalajara y c
     => Un dia completo cada 3 semanas
  
  - ¿Que colores de la paleta de laboratoria prefieres?
-   => Amarillo y fucsia
+   => Amarillo y fucsia💛 💖❇️
 
 - ¿A que informacion o dato le otorgas mayor importancia?
-   => Otorgo mayor importancia a los ejercicios y su completitud
+   => Otorgo mayor importancia a los ejercicios y su completitud✔️
   
 
-### Sketch de la solución 
+### Sketch de la solución 💡 ✏️
 
 * primero boceteamos,nuestras ideas hubieron 2 versiones,pero finalmente descartamos lo que no sirve y utilizamos lo que realmente es util para los usuarios 
 
@@ -157,11 +158,11 @@ En la pagina numero 1 ,se pretende mostrar una version preliminar de la vista 1 
 
 ![proto virg2](https://user-images.githubusercontent.com/39390011/41487242-7d287d16-70ad-11e8-9404-c95da88b61dc.jpg)
 
-En la pagina numero 2 ,se pretende mostrar una version preliminar de la vista 2 que mostrara un porcentaje o promedio de por alumna pero antes mostrara una tabla por orden de "merito"
+En la pagina numero 2 ,se pretende mostrar una version preliminar de la vista 2 que mostrara un porcentaje o promedio de por alumna pero antes mostrara una tabla por orden de "merito"🎖
 
 ![proto virg1](https://user-images.githubusercontent.com/39390011/41487241-7ca32f08-70ad-11e8-941b-93edd7d96147.jpg)
 
-se pretende presentar una version de las 2 vistas juntas con graficas(barras ,dona) donde se espefica horas de trabajo,quizzes ,practices resueltos yexistentes por unidad
+se pretende presentar una version de las 2 vistas juntas con graficas(barras ,dona) donde se espefica horas de trabajo,quizzes ,practices resueltos y existentes por unidad
 
 ![proto yeni](https://user-images.githubusercontent.com/39390011/41487240-7c7a2d74-70ad-11e8-90b3-602ea4418570.jpg)
 
@@ -183,7 +184,7 @@ luego de acomodar nuestras ideas y tener claro que queremos hacer ,realizamos la
 ![7](https://user-images.githubusercontent.com/39390011/41488514-34022a9c-70b2-11e8-9664-675e67d5be20.jpg)
 
 
-### Wireframe de baja fidelidad 
+### Wireframe de baja fidelidad📐 📝
 
 * vista 1:
 
