@@ -77,22 +77,8 @@ transporte, o simplemente los indicadores clave de tu propio emprendimiento ;)
 
 ![logo](https://user-images.githubusercontent.com/39390011/41486589-bb145bf2-70aa-11e8-9db0-622c51b65dfa.png)
 
-* tomamos como prohibido usar lo que nosotros queremos o deseamos para la pagina y tomamos en cuenta las necesidades del usuario,debido a esto creamos uuna "verison 2.0" del boceto
+* tomamos como prohibido usar lo que nosotros queremos o deseamos para la pagina y tomamos en cuenta las necesidades del usuario,debido a esto creamos uuna "version 2.0" del boceto
 
-
-![1](https://user-images.githubusercontent.com/39390011/41488515-342ce6e2-70b2-11e8-9eee-e277f93e6132.jpg)
-
-![2](https://user-images.githubusercontent.com/39390011/41488516-3457353c-70b2-11e8-9bd0-56dd993de7c7.jpg)
-
-![3](https://user-images.githubusercontent.com/39390011/41488518-3484922a-70b2-11e8-8b1a-484fc2154ccb.jpg)
-
-![4](https://user-images.githubusercontent.com/39390011/41488519-349fec00-70b2-11e8-89ad-db51cce99c48.jpg)
-
-![5](https://user-images.githubusercontent.com/39390011/41488520-34da0ce6-70b2-11e8-9fd2-f994c11f3168.jpg)
-
-![6](https://user-images.githubusercontent.com/39390011/41488513-33d546a8-70b2-11e8-9df0-668af0416019.jpg)
-
-![7](https://user-images.githubusercontent.com/39390011/41488514-34022a9c-70b2-11e8-9664-675e67d5be20.jpg)
 
 luego avanzamos con el diseño de la pagina ,el header originalmente fue negro
 
@@ -114,7 +100,20 @@ deidimos esconder momentaneamente la barra de navegacion ,llegaremos a un acuerd
 
 ![codigo del nav borrado](https://user-images.githubusercontent.com/39390011/42058024-a6ea3f68-7ae4-11e8-9f8c-4261498f4ce8.PNG)
 
+pusimos un prompt,el cual requiere que el usuario ponga sus datos
 
+![promp pag](https://user-images.githubusercontent.com/39390011/42058008-a3bdd200-7ae4-11e8-9dec-dca342ff35aa.PNG)
+
+en nuestra version inicial ,todos los datos eran mostrados mediante una tabla 
+
+![version anterio](https://user-images.githubusercontent.com/39390011/42058010-a42d34ba-7ae4-11e8-9440-3e22c31516db.PNG)
+
+![funcionalidad tabla](https://user-images.githubusercontent.com/39390011/42058021-a6c002d4-7ae4-11e8-883e-1d5bb4b5dd8a.gif)
+
+![tabla descendente y nav oculto](https://user-images.githubusercontent.com/39390011/42058009-a3f4b39c-7ae4-11e8-8854-4876711e6b4f.gif)
+
+
+luego de contemplar los pro's y los contras de esta version decidimos crear otra version que mostraba los datos mediante cards,ya que la version previa tenia los datos de las alumnas organizado de tal forma que la pagina se veia saturada de informacion
 ### Entrevistas📝
 Hicimos 2 entrevistas en la primera presentamos un bosquejo de la pagina:
 
@@ -150,7 +149,7 @@ Los trainning manager de cada sede 🌎 (lima,santiago,sao paulo,guadalajara y c
    => Otorgo mayor importancia a los ejercicios y su completitud
   
 
-#### 2) Sketch de la solución (prototipo de baja fidelidad)
+#### 2) Sketch de la solución 
 
 * primero boceteamos,nuestras ideas hubieron 2 versiones,pero finalmente descartamos lo que no sirve y utilizamos lo que realmente es util para los usuarios 
 
@@ -168,6 +167,23 @@ se pretende presentar una version de las 2 vistas juntas con graficas(barras ,do
 
 
 luego de acomodar nuestras ideas y tener claro que queremos hacer ,realizamos las vistas.
+
+![1](https://user-images.githubusercontent.com/39390011/41488515-342ce6e2-70b2-11e8-9eee-e277f93e6132.jpg)
+
+![2](https://user-images.githubusercontent.com/39390011/41488516-3457353c-70b2-11e8-9bd0-56dd993de7c7.jpg)
+
+![3](https://user-images.githubusercontent.com/39390011/41488518-3484922a-70b2-11e8-8b1a-484fc2154ccb.jpg)
+
+![4](https://user-images.githubusercontent.com/39390011/41488519-349fec00-70b2-11e8-89ad-db51cce99c48.jpg)
+
+![5](https://user-images.githubusercontent.com/39390011/41488520-34da0ce6-70b2-11e8-9fd2-f994c11f3168.jpg)
+
+![6](https://user-images.githubusercontent.com/39390011/41488513-33d546a8-70b2-11e8-9df0-668af0416019.jpg)
+
+![7](https://user-images.githubusercontent.com/39390011/41488514-34022a9c-70b2-11e8-9664-675e67d5be20.jpg)
+
+
+#### 3) Wireframe de baja fidelidad 
 
 * vista 1:
 
@@ -205,7 +221,7 @@ luego de acomodar nuestras ideas y tener claro que queremos hacer ,realizamos la
 
 ![9](https://user-images.githubusercontent.com/39390011/41486856-bd8bc2ca-70ab-11e8-9607-88a4e3c10d52.jpg)
 
-#### 3) Diseño de la Interfaz de Usuario (prototipo de alta fidelidad)
+#### 4) Diseño de la Interfaz de Usuario (prototipo de alta fidelidad)
 
 Lo siguiente es diseñar tu Interfaz de Usuario (UI por sus siglas en inglés).
 Para eso debes aprender a utilizar alguna herramienta de diseño visual.
