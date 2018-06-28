@@ -181,26 +181,27 @@ const processCohortData = (options) => {
         - search: String de búsqueda (ver filterUsers)
     */
 
-    let courses = [];
-    for(key in options.cohort[0].coursesIndex){
-        courses.push(key);
-    }
+  let courses = [];
+  for(key in options.cohort[0].coursesIndex){
+      courses.push(key);
+  }
 
-    let students = options.cohortData.users.filter(
-        user => user.role == 'student'
-    );
+  let students = options.cohortData.users.filter(
+      user => user.role == 'student'
+  );
 
-   let usersWithStats = computeUsersStats(students, options.cohortData.progress, courses);
-   let sortUsersWithStats = sortUsers(usersWithStats, options.orderBy, options.orderDirection);
-   //Llamar a la 3ra funcion
-   let searchUsers =  filterUsers(sortUsersWithStats, options.search);
-   return searchUsers;
+  let usersWithStats = computeUsersStats(students, options.cohortData.progress, courses);
+  let sortUsersWithStats = sortUsers(usersWithStats, options.orderBy, options.orderDirection);
+  //Llamar a la 3ra funcion
+  let searchUsers =  filterUsers(sortUsersWithStats, options.search);
+  return searchUsers;
    
 
 }
-function filterUsers(users,search) {
-  users.filter(function(n) {
-    return  n.name.toLowerCase().indexOf(search.toLowerCase()) > -1;
-  })
-  ;
+
+const filterUsers = (users,search) => {
+  let foundUsers = users.filter(
+    n => n.name.toLowerCase().indexOf(search.toLowerCase()) > -1  
+  );
+  return foundUsers;
 }

@@ -207,32 +207,76 @@ tr:hover td {
   color: #FF009E; 
 }
 
+.listStudents{
+  display: flex;
+  flex-wrap: wrap; /* evita que todos los .card esten en una fila*/
+}
+
+.card {
+  border: 1px solid #000;
+  width: 32%;
+  max-width: 32%;
+  padding: 5px;
+  margin: 10px;
+  box-sizing: border-box;
+  flex-grow: 1;
+}
+
+.card .avatar {
+  width: 30%;
+  box-sizing: border-box;
+  float: left;
+  padding: 5px;
+}
+
+.card .avatar img {
+  max-width: 100%;
+}
+
+.card .stats {
+  width: 70%;
+  box-sizing: border-box;
+  float: left;
+  padding: 5px;
+}
+
+.card .stats h3{
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.card .stats h4{
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.card .stats p{
+  font-size: 14px;
+  font-weight: normal;
+}
+
 /*tamaños mayores a 1200px usan el estilo normal*/
 
 /*tamaños hasta 1200px*/
-@media (max-width: 1200px) {
-  body {
-    background-color: yellow;
+@media (max-width: 1400px) {
+  .card {
+    width: 48%;
   }
 }
 
 /*tamaños hasta 992px*/
 @media (max-width: 992px) {
-  body {
-    background-color: green;
+  .card {
+    width: 100%;
   }
 }
 
 /*tamaños hasta 768px*/
 @media (max-width: 768px) {
-  body {
-    background-color: blue;
-  }
+  
 }
 
 /*tamaños hasta 576px*/
 @media (max-width: 576px) { 
-  body {
-    background-color: red;
-  }
+  
 }

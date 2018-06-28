@@ -54,13 +54,6 @@ buttonAddClass.addEventListener('click',() => {
 
 let filterById = document.getElementById("orderByFilter");
 let inputText = filterById.value; 
-document.getElementById("orderByFilter").addEventListener("keyup",()=>{
-
-
-
-
-});
-
 
 const fileCohort = '../data/cohorts.json';
 const fileProgress = '../data/cohorts/lim-2018-03-pre-core-pw/progress.json';
@@ -69,206 +62,169 @@ const urls = [fileCohort, fileProgress, fileUsers];
 let cohorts = [];
 let progress = [];
 let users = [];
-//parametros por defecto: en caso de llamar a la funcion sin enviar parametros, usará los valores por defecto
 
-/* 
 const listStudents = document.getElementById('listStudents');
-const botonAlumna = document.getElementById('botonalumna');
-//ordenar
 const orderBy = document.getElementById('orderBy');
 const orderDirection = document.getElementById('orderDirection');
 const buttonSort = document.getElementById('sort');
+
+//parametros por defecto: en caso de llamar a la funcion sin enviar parametros, usará los valores por defecto
+
+/* 
+
+const botonAlumna = document.getElementById('botonalumna');
+//ordenar
+
 //Aqui llamo a mi funcion para que se ejecute
 botonAlumna.addEventListener('click', () => {
     //loadStats(); //usara parametros por defecto
     processCohortData();
 });
-buttonSort.addEventListener('click', () => {
-    //loadStats(orderBy.value, orderDirection.value); //usara los value de los select
-}); */
+ */
 
-selectElement.addEventListener('change', () => {
-    
-    Promise.all(
-        urls.map(
-            url => fetch(url)
-        )
-    )
-    .then(
-        //Convertir la data recibida de los tres fetch a texto
-        response => Promise.all(
-            response.map(
-                data => data.text()
-            )
-        )
-    )
-    .then(
-        response => {
-            cohorts = JSON.parse(response[0]);
-            progress = JSON.parse(response[1]);
-            users = JSON.parse(response[2]);
-            
-            //usara los value de los select
-            let options = {
-                cohort: '',
-                cohortData: {
-                    users: {},
-                    progress: {}
-                },
-                orderBy: '',
-                orderDirection: '',
-                search: ''
-            };
-
-            idCohort = selectElement.value; //value del select cohorts
-
-            let selectedCohort = cohorts.filter(
-                cohort => cohort.id == idCohort
-            );
-
-            options.cohort = selectedCohort; //objeto del cohort seleccionado
-            options.cohortData.users = users;
-            options.cohortData.progress = progress;
-            options.orderBy = orderBy.value;
-            options.orderDirection = orderDirection.value;
-            options.search = filterById.value;
-            console.log(options);
-
-            let data = processCohortData(options);
-            console.log(data);
-            let ausers =  filterUsers(users,filterById.value);
-            console.log (ausers);
-            listStudents.innerHTML = '';
-            data.map(
-                userWithStats => {
-                    const row = document.createElement('tr');
-                    
-                    const cellName = document.createElement('td');
-                    const cellPercent = document.createElement('td');
-                    const cellTotalExercises = document.createElement('td');
-                    const cellCompletedExercises = document.createElement('td');
-                    const cellPercentExercises = document.createElement('td');
-                    const name = document.createTextNode(userWithStats.name);
-                    let percent;
-                    let totalExercises;
-                    let completedExercises;
-                    let percentExercises;
-                    if(userWithStats.hasOwnProperty('stats')){
-                        percent = document.createTextNode(userWithStats.stats.percent);
-                        totalExercises = document.createTextNode(userWithStats.stats.exercises.total);
-                        completedExercises = document.createTextNode(userWithStats.stats.exercises.completed);
-                        percentExercises = document.createTextNode(userWithStats.stats.exercises.percent);
-                    }
-                    else{
-                        percent = document.createTextNode('---');
-                        totalExercises = document.createTextNode('---');
-                        completedExercises = document.createTextNode('---');
-                        percentExercises = document.createTextNode('---'); 
-                    }
-        
-                    cellName.appendChild(name);
-                    cellPercent.appendChild(percent);
-                    cellTotalExercises.appendChild(totalExercises);
-                    cellCompletedExercises.appendChild(completedExercises);
-                    cellPercentExercises.appendChild(percentExercises);
-                    row.appendChild(cellName);
-                    row.appendChild(cellPercent);
-                    row.appendChild(cellTotalExercises);
-                    row.appendChild(cellCompletedExercises);
-                    row.appendChild(cellPercentExercises);
-                    listStudents.appendChild(row);
-                }
-            );
-        }    
-    );
-     
+filterById.addEventListener('keypress', () => {
+  loadStats();
 });
 
+buttonSort.addEventListener('click', () => {
+  loadStats();  
+});
 
+selectElement.addEventListener('change', () => {
+  loadStats(); 
+  //mostrar filtros 
+});
 
-/*const loadStats = (orderBy = 'name', orderDirection = 'ASC') => {
-    //Promise.all espera que todos los fetch terminen
-    Promise.all(
-        urls.map(
-            url => fetch(url)
-        )
+const loadStats = () => {
+  Promise.all(
+    urls.map(
+        url => fetch(url)
     )
-    .then(
-        //Convertir la data recibida de los tres fetch a texto
-        response => Promise.all(
-            response.map(
-                data => data.text()
-            )
-        )
-    )
-    .then(
-        //Utilizamos la data de la forma deseada
-        response => {
-            cohorts = JSON.parse(response[0]);
-            progress = JSON.parse(response[1]);
-            users = JSON.parse(response[2]);
-            let courses = [];
-            cohorts.map(
-                cohort => {
-                    if(cohort.id == 'lim-2018-03-pre-core-pw'){
-                        //courses.push(cohort.coursesIndex);
-                        for(key in cohort.coursesIndex){
-                            courses.push(key);
-                        }
-                    }
+  )
+  .then(
+      //Convertir la data recibida de los tres fetch a texto
+      response => Promise.all(
+          response.map(
+              data => data.text()
+          )
+      )
+  )
+  .then(
+    response => {
+        cohorts = JSON.parse(response[0]);
+        progress = JSON.parse(response[1]);
+        users = JSON.parse(response[2]);
+        
+        //usara los value de los select
+        let options = {
+            cohort: '',
+            cohortData: {
+                users: {},
+                progress: {}
+            },
+            orderBy: '',
+            orderDirection: '',
+            search: ''
+        };
+
+        idCohort = selectElement.value; //value del select cohorts
+
+        let selectedCohort = cohorts.filter(
+            cohort => cohort.id == idCohort
+        );
+
+        options.cohort = selectedCohort; //objeto del cohort seleccionado
+        options.cohortData.users = users;
+        options.cohortData.progress = progress;
+        options.orderBy = orderBy.value;
+        options.orderDirection = orderDirection.value;
+        options.search = filterById.value;
+
+        let data = processCohortData(options);
+        let ausers =  filterUsers(users,filterById.value);
+        listStudents.innerHTML = '';
+        data.map(
+            userWithStats => {
+                //div card contenedor
+                const divCard = document.createElement('div');
+                divCard.className = 'card';
+
+                //div avatar - imagen
+                const divAvatar = document.createElement('div');
+                divAvatar.className = 'avatar';
+                divAvatar.innerHTML = '<img src="imagen/avatar.png" alt="' + userWithStats.name + '">';
+
+                //div stats - data de la alumna
+                const divStats = document.createElement('div');
+                divStats.className = 'stats';
+
+                //parrafos y titulos
+                const titleName = document.createElement('h3');
+                const name = document.createTextNode(userWithStats.name);
+
+                const paragraph1 = document.createElement('p');
+
+                const subtitle1 = document.createElement('h4');
+                subtitle1.innerHTML = 'Ejercicios';
+
+                const paragraph2 = document.createElement('p');
+
+                const subtitle2 = document.createElement('h4');
+                subtitle2.innerHTML = 'Cuestionarios';
+
+                const paragraph3 = document.createElement('p');
+                const paragraph4 = document.createElement('p');
+
+                const subtitle3 = document.createElement('h4');
+                subtitle3.innerHTML = 'Lecturas';
+
+                const paragraph5 = document.createElement('p');
+                
+                let percent;
+                let percentExercises;
+                let percentQuizzes;
+                let scoreAvgQuizzes;
+                let percentReads;
+                if(userWithStats.hasOwnProperty('stats')){
+                    percent = document.createTextNode('% de completitud total: ' + userWithStats.stats.percent);
+                    percentExercises = document.createTextNode('% autocorregidos completados: ' + userWithStats.stats.exercises.percent);
+                    percentQuizzes = document.createTextNode('% completados: ' + userWithStats.stats.quizzes.percent);
+                    scoreAvgQuizzes = document.createTextNode('Puntuación promedio completados: ' + userWithStats.stats.quizzes.scoreAvg);
+                    percentReads = document.createTextNode('% completadas: ' + userWithStats.stats.reads.percent);
                 }
-            );
-            let students = users.filter(
-                user => user.role == 'student'
-            );
-            let usersWithStats = computeUsersStats(students, progress, courses);
+                else{
+                    percent = document.createTextNode('% de completitud total: ---');
+                    percentExercises = document.createTextNode('% autocorregidos completados: ---');
+                    percentQuizzes = document.createTextNode('% completados: ---');
+                    scoreAvgQuizzes = document.createTextNode('Puntuación promedio completados: ---');
+                    percentReads = document.createTextNode('% completadas: ---'); 
+                }
+                
+                titleName.appendChild(name);
+                paragraph1.appendChild(percent);
+                paragraph2.appendChild(percentExercises);
+                paragraph3.appendChild(percentQuizzes);
+                paragraph4.appendChild(scoreAvgQuizzes);
+                paragraph5.appendChild(percentReads);
 
-           let sortUsersWithStats = sortUsers(usersWithStats, orderBy, orderDirection);
-           listStudents.innerHTML = '';
-           sortUsersWithStats.map(
-               userWithStats => {
-                   const row = document.createElement('tr');
-                   
-                   const cellName = document.createElement('td');
-                   const cellPercent = document.createElement('td');
-                   const cellTotalExercises = document.createElement('td');
-                   const cellCompletedExercises = document.createElement('td');
-                   const cellPercentExercises = document.createElement('td');
-                   const name = document.createTextNode(userWithStats.name);
-                   let percent;
-                   let totalExercises;
-                   let completedExercises;
-                   let percentExercises;
-                   if(userWithStats.hasOwnProperty('stats')){
-                       percent = document.createTextNode(userWithStats.stats.percent);
-                       totalExercises = document.createTextNode(userWithStats.stats.exercises.total);
-                       completedExercises = document.createTextNode(userWithStats.stats.exercises.completed);
-                       percentExercises = document.createTextNode(userWithStats.stats.exercises.percent);
-                   }
-                   else{
-                       percent = document.createTextNode('---');
-                       totalExercises = document.createTextNode('---');
-                       completedExercises = document.createTextNode('---');
-                       percentExercises = document.createTextNode('---'); 
-                   }
-       
-                   cellName.appendChild(name);
-                   cellPercent.appendChild(percent);
-                   cellTotalExercises.appendChild(totalExercises);
-                   cellCompletedExercises.appendChild(completedExercises);
-                   cellPercentExercises.appendChild(percentExercises);
-                   row.appendChild(cellName);
-                   row.appendChild(cellPercent);
-                   row.appendChild(cellTotalExercises);
-                   row.appendChild(cellCompletedExercises);
-                   row.appendChild(cellPercentExercises);
-                   listStudents.appendChild(row);
-               }
-           );
-       }
-   )
-   .catch((err) => {
-       // algo salió mal...
-       console.error(err)
-   });
-}*/
+                //añadimos los titulos y parrafos al div stats
+                divStats.appendChild(titleName);
+                divStats.appendChild(paragraph1);
+                divStats.appendChild(subtitle1);
+                divStats.appendChild(paragraph2);
+                divStats.appendChild(subtitle2);
+                divStats.appendChild(paragraph3);
+                divStats.appendChild(paragraph4);
+                divStats.appendChild(subtitle3);
+                divStats.appendChild(paragraph5);
+
+                //añadimos imagen y stats a card
+                divCard.appendChild(divAvatar);
+                divCard.appendChild(divStats);
+
+                listStudents.appendChild(divCard);
+            }
+        );
+    }    
+);
+}
