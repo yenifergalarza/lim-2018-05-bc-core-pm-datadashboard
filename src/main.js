@@ -51,6 +51,17 @@ buttonAddClass.addEventListener('click',() => {
   styleChange.classList.remove('class1');
  
 });
+
+let filterById = document.getElementById("orderByFilter");
+let inputText = filterById.value; 
+document.getElementById("orderByFilter").addEventListener("keyup",()=>{
+
+
+
+
+});
+
+
 const fileCohort = '../data/cohorts.json';
 const fileProgress = '../data/cohorts/lim-2018-03-pre-core-pw/progress.json';
 const fileUsers = '../data/cohorts/lim-2018-03-pre-core-pw/users.json';
@@ -120,8 +131,13 @@ selectElement.addEventListener('change', () => {
             options.cohortData.progress = progress;
             options.orderBy = orderBy.value;
             options.orderDirection = orderDirection.value;
+            options.search = filterById.value;
+            console.log(options);
 
             let data = processCohortData(options);
+            console.log(data);
+            let ausers =  filterUsers(users,filterById.value);
+            console.log (ausers);
             listStudents.innerHTML = '';
             data.map(
                 userWithStats => {
