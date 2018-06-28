@@ -149,7 +149,7 @@ Los trainning manager de cada sede 🌎 (lima,santiago,sao paulo,guadalajara y c
    => Otorgo mayor importancia a los ejercicios y su completitud
   
 
-#### 2) Sketch de la solución 
+### Sketch de la solución 
 
 * primero boceteamos,nuestras ideas hubieron 2 versiones,pero finalmente descartamos lo que no sirve y utilizamos lo que realmente es util para los usuarios 
 
@@ -183,7 +183,7 @@ luego de acomodar nuestras ideas y tener claro que queremos hacer ,realizamos la
 ![7](https://user-images.githubusercontent.com/39390011/41488514-34022a9c-70b2-11e8-9664-675e67d5be20.jpg)
 
 
-#### 3) Wireframe de baja fidelidad 
+### Wireframe de baja fidelidad 
 
 * vista 1:
 
@@ -221,7 +221,7 @@ luego de acomodar nuestras ideas y tener claro que queremos hacer ,realizamos la
 
 ![9](https://user-images.githubusercontent.com/39390011/41486856-bd8bc2ca-70ab-11e8-9607-88a4e3c10d52.jpg)
 
-#### 4) Diseño de la Interfaz de Usuario (prototipo de alta fidelidad)
+### Diseño de la Interfaz de Usuario (prototipo de alta fidelidad)
 
 Lo siguiente es diseñar tu Interfaz de Usuario (UI por sus siglas en inglés).
 Para eso debes aprender a utilizar alguna herramienta de diseño visual.
