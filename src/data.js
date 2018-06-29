@@ -75,20 +75,43 @@ window.computeUsersStats = (users, progress, courses) => {
                         }
                     }
                 );
-                
-                stats.percent = Math.round(sumPercent / countPercent);
+                if(countPercent != 0){
+                    stats.percent = Math.round(sumPercent / countPercent);    
+                }
+                else{
+                    stats.percent = 0;    
+                }
                 stats.exercises.total = countExercises;
                 stats.exercises.completed = completedExercises;
-                stats.exercises.percent = Math.round((completedExercises * 100) / countExercises);
+                if(countExercises != 0){
+                    stats.exercises.percent = Math.round((completedExercises * 100) / countExercises);
+                }
+                else{
+                    stats.exercises.percent = 0;    
+                }                
                 stats.reads.total = countReads;
                 stats.reads.completed = completedReads;
-                stats.reads.percent = Math.round((completedReads * 100) / countReads);
+                if(countReads != 0){
+                    stats.reads.percent = Math.round((completedReads * 100) / countReads);
+                }
+                else{
+                    stats.reads.percent = 0;    
+                }
                 stats.quizzes.total = countQuizzes;
                 stats.quizzes.completed = completedQuizzes;
-                stats.quizzes.percent = Math.round((completedQuizzes * 100) / countQuizzes);
+                if(countQuizzes != 0){
+                    stats.quizzes.percent = Math.round((completedQuizzes * 100) / countQuizzes);
+                }
+                else{
+                    stats.quizzes.percent = 0;    
+                }
                 stats.quizzes.scoreSum = sumScore;
-                stats.quizzes.scoreAvg = Math.round(sumScore / completedQuizzes);
-
+                if(completedQuizzes != 0){
+                    stats.quizzes.scoreAvg = Math.round(sumScore / completedQuizzes);
+                }
+                else{
+                    stats.quizzes.scoreAvg = 0;
+                }
                 user.stats = stats;
             } 
             return user;   
