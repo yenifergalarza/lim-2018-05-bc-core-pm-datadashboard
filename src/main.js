@@ -1,3 +1,6 @@
+
+
+
 var name = prompt('Ingresa tu nombre por favor');
 var name1 = document.getElementById('name');
 name1.textContent = "Bienvenid@  " + name;
@@ -44,13 +47,7 @@ fetch('../data/cohorts.json')
     console.error("failed", err);
   });
   //Hace que el menu  lateral aparezca y desaparezca
-const buttonAddClass = document.getElementById("styleWhenClickHtml");
-const styleChange = document.getElementById("styleChangeHtml");
-buttonAddClass.addEventListener('click',() => {
-  styleChange.classList.add('class2');
-  styleChange.classList.remove('class1');
- 
-});
+
 
 let filterById = document.getElementById("orderByFilter");
 let inputText = filterById.value; 
