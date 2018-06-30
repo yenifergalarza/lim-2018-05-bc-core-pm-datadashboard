@@ -142,6 +142,7 @@ const loadStats = () => {
 
         let data = processCohortData(options);
         let ausers =  filterUsers(users,filterById.value);
+        console.log(data);
         listStudents.innerHTML = '';
         data.map(
             userWithStats => {

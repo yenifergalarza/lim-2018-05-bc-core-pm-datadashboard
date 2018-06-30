@@ -47,10 +47,7 @@ window.computeUsersStats = (users, progress, courses) => {
                             let parts = units[unit].parts;
 
                             for(part in parts){
-                                if(parts[part].type == 'practice'){
-                                    countExercises++;
-                                }
-                                else if(parts[part].type == 'read'){
+                                if(parts[part].type == 'read'){
                                     countReads++;
                                     if(parts[part].completed == 1){
                                         completedReads++;
@@ -111,9 +108,9 @@ window.computeUsersStats = (users, progress, courses) => {
                 }
                 else{
                     stats.quizzes.scoreAvg = 0;
-                }
-                user.stats = stats;
+                } 
             } 
+            user.stats = stats;
             return user;   
         } 
     );
