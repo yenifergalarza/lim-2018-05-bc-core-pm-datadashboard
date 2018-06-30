@@ -43,14 +43,33 @@ fetch('../data/cohorts.json')
     // algo salió mal...
     console.error("failed", err);
   });
-  //Hace que el menu  lateral aparezca y desaparezca
-const buttonAddClass = document.getElementById("styleWhenClickHtml");
-const styleChange = document.getElementById("styleChangeHtml");
-buttonAddClass.addEventListener('click',() => {
-  styleChange.classList.add('class2');
-  styleChange.classList.remove('class1');
  
-});
+const textInput = document.getElementById("orderByFilter");
+const buttonFilter= document.getElementById("orderByfilterButton");
+console.log(buttonFilter);
+let input = textInput.value;
+buttonFilter.addEventListener('click',hola= (e) => {
+    e.preventDefault();
+    
+    console.log(input.value);
+    //console.log(document.getElementById('orderByfilter').value);
+    //let text = textInput.value;
+    
+   
+     
+         users.filter((n) => {
+            return n.toLowerCase().indexOf(input.toLowerCase()) > -1;
+        
+        })
+        
+      
+
+ } );
+ console.log(hola())
+
+
+
+
 
 let filterById = document.getElementById("orderByFilter");
 let inputText = filterById.value; 
@@ -200,6 +219,7 @@ const loadStats = () => {
                     scoreAvgQuizzes = document.createTextNode('Puntuación promedio completados: ---');
                     percentReads = document.createTextNode('% completadas: ---'); 
                 }
+
                 
                 titleName.appendChild(name);
                 paragraph1.appendChild(percent);
