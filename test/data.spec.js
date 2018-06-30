@@ -92,14 +92,96 @@ describe('data', () => {
 
       const processed = sortUsers(users, 'name', 'ASC');
       
-      assert.equal(order, processed);
+      assert.deepEqual(order, processed);
 
     });
-    it('debería retornar arreglo de usuarios ordenado por nombre DESC');
-    it('debería retornar arreglo de usuarios ordenado por porcentaje general ASC');
-    it('debería retornar arreglo de usuarios ordenado por porcentaje general DESC');
-    it('debería retornar arreglo de usuarios ordenado por ejercicios completados ASC');
-    it('debería retornar arreglo de usuarios ordenado por ejercicios completados DESC');
+    it('debería retornar arreglo de usuarios ordenado por nombre DESC', () => {
+      const users = fixtures.users;
+      
+      const order = users.sort((a, b) => {
+        if (b.name > a.name) {
+          return 1;
+        }
+        if (b.name < a.name) {
+            return -1;
+        }
+        return 0;
+      });
+
+      const processed = sortUsers(users, 'name', 'DESC');
+      
+      assert.deepEqual(order, processed);
+
+    });
+    it('debería retornar arreglo de usuarios ordenado por porcentaje general ASC', () => {
+      const users = fixtures.users;
+      
+    
+      const order = users.sort((a, b) => {
+        if (a.stats.percent > b.stats.percent) {
+          return 1;
+        }
+        if (a.stats.percent < b.stats.percent) {
+            return -1;
+        }
+        return 0;
+      });
+
+      const processed = sortUsers(users, 'percent', 'ASC');
+      
+      assert.deepEqual(order, processed);  
+    });
+    it('debería retornar arreglo de usuarios ordenado por porcentaje general DESC', () => {
+      const users = fixtures.users;
+      
+      const order = users.sort((a, b) => {
+        if (b.stats.percent > a.stats.percent) {
+          return 1;
+        }
+        if (b.stats.percent < a.stats.percent) {
+            return -1;
+        }
+        return 0;
+      });
+
+      const processed = sortUsers(users, 'percent', 'DESC');
+      
+      assert.deepEqual(order, processed);        
+    });
+    it('debería retornar arreglo de usuarios ordenado por ejercicios completados ASC', () => {
+      const users = fixtures.users;
+      
+      const order = users.sort((a, b) => {
+        if (a.stats.exercises.percent > b.stats.exercises.percent) {
+          return 1;
+        }
+        if (a.stats.exercises.percent < b.stats.exercises.percent) {
+            return -1;
+        }
+        return 0;
+      });
+
+      const processed = sortUsers(users, 'exercisesPercent5', 'ASC');
+      
+      assert.deepEqual(order, processed);  
+    });
+    it('debería retornar arreglo de usuarios ordenado por ejercicios completados DESC'), () => {
+      const users = fixtures.users;
+      
+      const order = users.sort((a, b) => {
+        if (b.stats.exercises.percent > a.stats.exercises.percent) {
+          return 1;
+        }
+        if (b.stats.exercises.percent < a.stats.exercises.percent) {
+            return -1;
+        }
+        return 0;
+      });
+
+      const processed = sortUsers(users, 'exercisesPercent', 'DESC');
+      
+      assert.deepEqual(order, processed);
+    };
     it('debería retornar arreglo de usuarios ordenado por quizzes completados ASC');
     it('debería retornar arreglo de usuarios ordenado por quizzes completados DESC');
     it('debería retornar arreglo de usuarios ordenado por score promedio en quizzes completados ASC');
