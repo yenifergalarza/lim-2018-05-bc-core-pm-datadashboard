@@ -165,7 +165,7 @@ describe('data', () => {
       
       assert.deepEqual(order, processed);  
     });
-    it('debería retornar arreglo de usuarios ordenado por ejercicios completados DESC'), () => {
+    it('debería retornar arreglo de usuarios ordenado por ejercicios completados DESC', () => {
       const users = fixtures.users;
       
       const order = users.sort((a, b) => {
@@ -181,25 +181,181 @@ describe('data', () => {
       const processed = sortUsers(users, 'exercisesPercent', 'DESC');
       
       assert.deepEqual(order, processed);
-    };
-    it('debería retornar arreglo de usuarios ordenado por quizzes completados ASC');
-    it('debería retornar arreglo de usuarios ordenado por quizzes completados DESC');
-    it('debería retornar arreglo de usuarios ordenado por score promedio en quizzes completados ASC');
-    it('debería retornar arreglo de usuarios ordenado por score promedio en quizzes completados DESC');
-    it('debería retornar arreglo de usuarios ordenado por lecturas (reads) completadas ASC');
-    it('debería retornar arreglo de usuarios ordenado por lecturas (reads) completadas DESC');
+    });
+    it('debería retornar arreglo de usuarios ordenado por quizzes completados ASC', () => {
+      const users = fixtures.users;
+      
+      const order = users.sort((a, b) => {
+        if (a.stats.quizzes.percent > b.stats.quizzes.percent) {
+          return 1;
+        }
+        if (a.stats.quizzes.percent < b.stats.quizzes.percent) {
+            return -1;
+        }
+        return 0;
+      });
+
+      const processed = sortUsers(users, 'quizzesPercent', 'ASC');
+      
+      assert.deepEqual(order, processed);  
+    });
+    it('debería retornar arreglo de usuarios ordenado por quizzes completados DESC', () => {
+      const users = fixtures.users;
+      
+      const order = users.sort((a, b) => {
+        if (b.stats.quizzes.percent > a.stats.quizzes.percent) {
+          return 1;
+        }
+        if (b.stats.quizzes.percent < a.stats.quizzes.percent) {
+            return -1;
+        }
+        return 0;
+      });
+
+      const processed = sortUsers(users, 'quizzesPercent', 'DESC');
+      
+      assert.deepEqual(order, processed);
+    });
+    it('debería retornar arreglo de usuarios ordenado por score promedio en quizzes completados ASC', () => {
+      const users = fixtures.users;
+      
+      const order = users.sort((a, b) => {
+        if (a.stats.quizzes.scoreAvg > b.stats.quizzes.scoreAvg) {
+          return 1;
+        }
+        if (a.stats.quizzes.scoreAvg < b.stats.quizzes.scoreAvg) {
+            return -1;
+        }
+        return 0;
+      });
+
+      const processed = sortUsers(users, 'quizzesScoreAvg', 'ASC');
+      
+      assert.deepEqual(order, processed);  
+    });
+    it('debería retornar arreglo de usuarios ordenado por score promedio en quizzes completados DESC', () => {
+      const users = fixtures.users;
+      
+      const order = users.sort((a, b) => {
+        if (b.stats.quizzes.scoreAvg > a.stats.quizzes.scoreAvg) {
+          return 1;
+        }
+        if (b.stats.quizzes.scoreAvg < a.stats.quizzes.scoreAvg) {
+            return -1;
+        }
+        return 0;
+      });
+
+      const processed = sortUsers(users, 'quizzesScoreAvg', 'DESC');
+      
+      assert.deepEqual(order, processed); 
+    });
+    it('debería retornar arreglo de usuarios ordenado por lecturas (reads) completadas ASC', () => {
+      const users = fixtures.users;
+      
+      const order = users.sort((a, b) => {
+        if (a.stats.reads.percent > b.stats.reads.percent) {
+          return 1;
+        }
+        if (a.stats.reads.percent < b.stats.reads.percent) {
+            return -1;
+        }
+        return 0;
+      });
+
+      const processed = sortUsers(users, 'readsPercent', 'ASC');
+      
+      assert.deepEqual(order, processed);  
+    });
+    it('debería retornar arreglo de usuarios ordenado por lecturas (reads) completadas DESC', () => {
+      const users = fixtures.users;
+      
+      const order = users.sort((a, b) => {
+        if (b.stats.reads.percent > a.stats.reads.percent) {
+          return 1;
+        }
+        if (b.stats.reads.percent < a.stats.reads.percent) {
+            return -1;
+        }
+        return 0;
+      });
+
+      const processed = sortUsers(users, 'readsPercent', 'DESC');
+      
+      assert.deepEqual(order, processed);  
+    });
 
   });
 
   describe('filterUsers(users, filterBy)', () => {
 
-    it('debería retornar nuevo arreglo solo con usuarios con nombres que contengan string (case insensitive)');
+    it('debería retornar nuevo arreglo solo con usuarios con nombres que contengan string (case insensitive)', () => {
+      const users = fixtures.users; 
+      let foundUsers = users.filter(
+        user => user.name.toLowerCase().indexOf('virginia') > -1   
+      );   
+      const processed = filterUsers(users,'virginia');
+
+      assert.deepEqual(foundUsers, processed);
+    });
 
   });
 
   describe('processCohortData({ cohortData, orderBy, orderDirection, filterBy })', () => {
 
-    it('debería retornar arreglo de usuarios con propiedad stats y aplicar sort y filter');
+    it('debería retornar arreglo de usuarios con propiedad stats y aplicar sort y filter', () => {
+      let cohort = fixtures.cohorts.filter(
+        cohort => cohort.id == 'lim-2018-03-pre-core-pw'
+    );
+      const { users, progress } = fixtures;
+      const userData = [
+        {
+          id:"DH6NiODCdYM9ick0YQLf54cfHMv2",
+          name:"Virginia Contreras",
+          locale:"es-ES",
+          signupCohort:"lim-2018-03-pre-core-pw",
+          timezone:"America/Lima",
+          role:"student",
+          stats:{
+            percent:100,
+            exercises:{total:2,completed:2,percent:100},
+            reads:{total:11,completed:11,percent:100},
+            quizzes:{total:3,completed:3,percent:100,scoreSum:263,scoreAvg:88}
+          }
+        },
+        {
+          id:"TxK6t8BcKEWu7MaKJGQBqKrSFXh2",
+          timezone:"America/Lima",
+          name:"virginia",
+          locale:"es-PE",
+          signupCohort:"lim-2018-03-pre-core-pw",
+          role:"student",
+          stats:{
+            percent:34,
+            exercises:{total:2,completed:0,percent:0},
+            reads:{total:11,completed:4,percent:36},
+            quizzes:{total:3,completed:1,percent:33,scoreSum:40,scoreAvg:40}
+          }
+        }
+      ];
+
+      let options = {
+        cohort: cohort,
+        cohortData: {
+            users: users,
+            progress: progress
+        },
+        orderBy: 'name',
+        orderDirection: 'ASC',
+        search: 'virginia'
+      };
+    
+      const processed = processCohortData(options); 
+      assert.deepEqual(userData, processed);  
+      /* console.log(userData);
+      console.log(processed); */
+
+    });
 
   });
 

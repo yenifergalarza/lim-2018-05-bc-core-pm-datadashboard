@@ -44,35 +44,7 @@ fetch('../data/cohorts.json')
     console.error("failed", err);
   });
  
-const textInput = document.getElementById("orderByFilter");
-const buttonFilter= document.getElementById("orderByfilterButton");
-console.log(buttonFilter);
-let input = textInput.value;
-buttonFilter.addEventListener('click',hola= (e) => {
-    e.preventDefault();
-    
-    console.log(input.value);
-    //console.log(document.getElementById('orderByfilter').value);
-    //let text = textInput.value;
-    
-   
-     
-         users.filter((n) => {
-            return n.toLowerCase().indexOf(input.toLowerCase()) > -1;
-        
-        })
-        
-      
-
- } );
- console.log(hola())
-
-
-
-
-
 let filterById = document.getElementById("orderByFilter");
-let inputText = filterById.value; 
 
 const fileCohort = '../data/cohorts.json';
 const fileProgress = '../data/cohorts/lim-2018-03-pre-core-pw/progress.json';
@@ -89,17 +61,6 @@ const buttonSort = document.getElementById('sort');
 
 //parametros por defecto: en caso de llamar a la funcion sin enviar parametros, usará los valores por defecto
 
-/* 
-
-const botonAlumna = document.getElementById('botonalumna');
-//ordenar
-
-//Aqui llamo a mi funcion para que se ejecute
-botonAlumna.addEventListener('click', () => {
-    //loadStats(); //usara parametros por defecto
-    processCohortData();
-});
- */
 
 filterById.addEventListener('keypress', () => {
   loadStats();
@@ -161,7 +122,6 @@ const loadStats = () => {
 
         let data = processCohortData(options);
         let ausers =  filterUsers(users,filterById.value);
-        console.log(data);
         listStudents.innerHTML = '';
         data.map(
             userWithStats => {
