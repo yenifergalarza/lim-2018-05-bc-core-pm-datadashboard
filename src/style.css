@@ -1,9 +1,15 @@
 
-/*tamaños mayores a 1200px usan el estilo normal*/
-*{
+
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+@media (min-width: 320px) {
+
+  .logo2{
+    display:none;
+  }
+  *{
   margin:0px;
   padding: 0px;
-  font-family: 'open', sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 body{
   margin: 0;
@@ -11,48 +17,66 @@ body{
   background-color:#F5F5F5;
   
 }
-section{ display: flex;
+
+section{ 
   flex-wrap: nowrap;
  }
-header{
-  margin: 0;
-  padding: 0;
-  background-color : #FFE521;
-  top: 0;
-  left: auto;
-  right: 0;
-  position: fixed;
-  width: 100%;
-  height: 10.6%;
-  background-image: url(imagen/flechasrosadas.png);
-  background-repeat: no-repeat;
-  background-size: 150px;
-  background-position-x: 95%;
-  
+ div.sedes{
+  width: calc(100% - 300px);
+  padding-left: 10%;
+  align-items: center;
 }
-select{align-items: center;}
-.vistaclick{padding-left:0px;}
-p{  margin: 0;
+select #cohorts{
+  padding-left: 50%;
+  align-items: center;
+}
+
+  header{
+    margin: 0;
+    padding: 0;
+    background-color : #FFE521;
+    top: 0;
+    left: auto;
+    right: 0;
+    position: relative;
+    width: 100%;
+    height: 22.6%;
+    background-image: url(imagen/flechasrosadas.png);
+    background-repeat: no-repeat;
+    background-size: 150px;
+    background-position-x: 95%;
+  }
+
+.vistaclick{
+  padding-left:0px;
+}
+p{ 
+   margin: 0;
   padding: 0;
   
   font-size: 1.3125rem;
   font-weight: 700;
-  font-family: bitter, "Helvetica Neue", Arial, sans-serif;
   line-height: 1.16667em;
   
  } 
- .text {color :white;}
+ .text
+  {
+   color :white;
+    padding-left:0%;
+  font-size: 20px;
+}
  
- 
-   
-  .logo1{width: 250px;
+   .logo1
+   {
+     width: 250px;
     height: 5%;
   
  }
   
  
 
-  article{
+  article
+  {
     display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -69,47 +93,258 @@ p{  margin: 0;
  .filtros{
   padding-left: 17px;}
  
- .flechitas{
-  display: flex;
-    float:right;
-    top:10px;
+   
+   .students{
+     border-color: #0f0f0f
+   }
+   .class1{
+    padding-left:8px ;
+    margin-top: 45px;
+    padding-left: 10%; 
+    padding-right: 10%; 
   }
-.class1{
   
-  margin-top: 65px;
-  padding:4%;
-  padding-left:200px;
+
+  .card {
+
+    max-width: 80%;
+    padding: 5px;
+    margin: 10px;
+    box-sizing: border-box;
+    flex-grow: 1;
+    border-radius: 5px;
+   box-shadow: -1px 7px 16px -1px rgba(0,0,0,1);
+    border: groove;
+    background-color:#fff;
+    border-top: 1px solid transparent; 
+    border-bottom: 1px solid transparent; 
+  }
+  
+  .card .avatar {
+    width: 165px;
+    box-sizing: border-box;
+    float: left;
+    margin-left: 30%;
+    margin-top: -2%
+    
+  }
+  
+  .card .avatar img {
+    max-width: 100%;
+  }
+  
+  .card .stats {
+    width: 70%;
+    box-sizing: border-box;
+    float: left;
+    padding: 5px;
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  .card .stats h3{
+    font-size: 18px;
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  .card .stats h4{
+    font-size: 16px;
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif;
+  
+  }
+  
+  .card .stats p{
+    font-size: 14px;
+    font-weight: normal;
+    font-family: 'Roboto', sans-serif;
+
+  }
+  .card:hover {
+    border-color: #FFE521;
+    box-shadow: inset 9px -2px 269px -40px  #FFE521;
+    color: #030304
+  }
+ 
+
+.listStudents{
+  display: flex;
+  flex-wrap: wrap; /* evita que todos los .card esten en una fila*/
 }
-.class2{ 
-  margin-top: 65px;
-  padding:4%;
-  padding-left:0px;
+
 }
+
+@media (min-width: 576px){
+  .logo2{display:none;
+
+ }
+  .class1{
+    padding-left:5% ;
+    padding-right:8px ;
+    margin-top: 45px;}
+    .logo1 {
+      width: 300px;
+      height: 62.8px;
+      margin-left: 25.5%;
+  }
+  
+  section{ 
+    flex-wrap: nowrap;
+   }
+   label.text{
+     font-size: 20px;
+     padding-left:55%
+   }
+   span.text{
+    font-size: 20px;
+    padding-left: 40%;
+    margin-right: -20%;
+  }
+ .sedes{
+     margin-right: 0px;
+    width: calc(100% - 300px);
+    padding-left: 15%;
+    align-items: center;
+  }
+   #cohorts{
+    margin-left: 15.5%;
+    align-items: center;
+  }
+    header{
+      width: 100%;
+      height: 22.6%;
+      background-image: url(imagen/flechasrosadas.png);
+      background-repeat:no-repeat;
+      background-size: 150px;
+      background-position-x: 95%;
+      background-position-y: 10px;
+    }
+   .headerstyle{
+      background-image: url(imagen/flechasrosadas2.png);
+      background-repeat: repeat-y;
+      background-size: 150px;
+      background-position-x: 5%;
+      background-position-y: 10px;
+      background-repeat:no-repeat;
+    }
+  
+  .card {
+
+    max-width: 45%;
+    padding: 5px;
+    margin: 10px;
+    box-sizing: border-box;
+    flex-grow: 1;
+    border-radius: 5px;
+   box-shadow: -1px 7px 16px -1px rgba(0,0,0,1);
+    border: groove;
+    background-color:#fff;
+    border-top: 1px solid transparent; 
+    border-bottom: 1px solid transparent; 
+  }
+  
+  .card .avatar {
+    width: 165px;
+    box-sizing: border-box;
+    float: left;
+    margin-left: 30%;
+    margin-top: -2%
+    
+  }
+  
+  .card .avatar img {
+    max-width: 100%;
+  }
+  
+  
+  .card:hover {
+    border-color: #FFE521;
+    box-shadow: inset 9px -2px 269px -40px  #FFE521;
+    color: #030304
+  }
+}
+@media(min-width:650px){
+  .logo1 {
+    width: 300px;
+    height: 65.8px;
+    margin-left: 32.5%;
+}
+
+}
+
+@media(min-width:640px){
+  .logo1 {
+    width: 300px;
+    height: 65.8px;
+    margin-left: 28.5%;}
+}
+@media (min-width: 732px){
+section{ display: flex;
+  flex-wrap: nowrap;
+ }
+header{
+  width: 100%;
+  height: 10.6%;
+  background-image: url(imagen/flechasrosadas.png);
+  background-repeat: no-repeat;
+  background-size: 100px;
+  background-position-x: 95%;
+  background-position-y: 0%;
+}
+.logo2{
+  width: 60px;
+  height: 60px;
+  margin-top: -0.5%;
+ display: block;
+ margin-left: 20%;
+}
+
+select{align-items: center;}
+.vistaclick{padding-left:0px;}
+p{  margin: 0;
+  padding: 0;
+  
+  font-size: 1.3125rem;
+  font-weight: 700;
+  font-family: bitter, "Helvetica Neue", Arial, sans-serif;
+  line-height: 1.16667em;
+  
+ } 
+ .logo1 {
+  margin-left: 0%;
+  width: 250px;
+  height: 5%;}
+
+.class1 {
+  padding-left: 5%;
+  padding-right: 8px;
+  margin-top: 50px;
+}
+
+ label.text{ 
+   padding-left: 0%;}
+   span.text{
+     padding-left: 0%;}
+.headerstyle{
+   background-image:none;
+ }
+ .filtros{
+  padding-left: 17px;}
+ 
+ 
 div.sedes{
   width: calc(100% - 300px);
   flex: 0 1 auto;
   display: flex;
+    margin-left:0%;
+    padding-left: 0%;
   align-items: center;
+
 }
-  .botonnav{
-    margin-top: 1px;
-  margin-left: 20px;
-  margin-bottom: 6px;
-  min-width: 5%;
-  min-height: 2px;
-  background-image: url(listaboton.svg);
-  background-size: 45px;
-  background-position-x: 11px;
-  background-position-y: 9px;
-  color: black;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 1px;
-  background-repeat: no-repeat;
-  background-color: #ffffff81;
-  border-radius: 20px;
-  border: #f3a8a881;
-  cursor: pointer;}
-   
+#cohorts {
+  margin-left: 0%;
+  
+}
    .students{
      border-color: #0f0f0f
    }
@@ -124,6 +359,42 @@ div.sedes{
   border: 1px solid #000;
   width: 32%;
   max-width: 32%;
+  padding: 5px;
+  margin: 10px;
+  box-sizing: border-box;
+  flex-grow: 1;
+  border-radius: 5px;
+ 
+  box-shadow: -1px 7px 16px -1px rgba(0,0,0,1);
+  border: groove;
+  background-color:#fff;
+
+
+
+}
+
+.card .avatar {
+  width: 30%;
+  box-sizing: border-box;
+  float: left;
+  padding: 5px;
+  margin-left: 0%; 
+}
+
+.card .avatar img {
+  max-width: 100%;
+}
+}
+@media (min-width: 1200px){
+  div.sedes{
+    flex: 0 1 auto;
+    display: flex;
+  }
+
+.card {
+  border: 1px solid #000;
+  width: 32%;
+  max-width: 22%;
   padding: 5px;
   margin: 10px;
   box-sizing: border-box;
@@ -170,342 +441,5 @@ div.sedes{
 
 }
 
-.card:hover {
-  border-color: #FFE521;
-  box-shadow: inset 9px -2px 269px -40px  #FFE521;
-  color: #030304;
-  cursor: pointer;
 }
 
-
-/*tamaños hasta 1200px*/
-@media (max-width: 1400px) {
- .listStudents {
-    
-  }
-  .card {
-    width: 48%;
-    border-top: 1px solid transparent; 
-    border-bottom: 1px solid transparent; 
-  }
-  .card .stats {
-    width: 70%;
-    box-sizing: border-box;
-    float: left;
-    padding: 5px;
-    font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
-  }
-  
-  .card .stats h3{
-    font-size: 18px;
-    font-weight: bold;
-    font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
-  }
-  
-  .card .stats h4{
-    font-size: 16px;
-    font-weight: bold;
-    font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
-  
-  }
-}
-
-/*tamaños hasta 992px*/
-@media (max-width: 992px)
-{ .listStudents {
-  flex-wrap: wrap;
-  ;
-}
-  .class1{
-    padding-left:8px ;
-    margin-top: 165px;
-    padding: 4%; 
-
-  }
-  section{ 
-    flex-wrap: nowrap;
-    display: block,
-   }
-
-  
-  header{
-    margin: 0;
-    padding: 0;
-    background-color : #FFE521;
-    top: 0;
-    left: auto;
-    right: 0;
-    position: fixed;
-    width: 100%;
-    height: 20.6%;
-    background-image: none;
-  }
-}
-
-  .card {
-    border: 1px solid #000;
-    max-width: 40%;
-    padding: 5px;
-    margin: 10px;
-    box-sizing: border-box;
-    flex-grow: 1;
-    border-radius: 5px;
-   box-shadow: -1px 7px 16px -1px rgba(0,0,0,1);
-    border: groove;
-    background-color:#fff;
-    border-top: 1px solid transparent; 
-    border-bottom: 1px solid transparent; 
-  }
-  
-  .card .avatar {
-    width: 120px;
-    box-sizing: border-box;
-    float: left;
-    padding: 5px;
-
-  }
-  
-  .card .avatar img {
-    max-width: 100%;
-  }
-  
-  .card .stats {
-    width: 70%;
-    box-sizing: border-box;
-    float: left;
-    padding: 5px;
-    font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
-  }
-  
-  .card .stats h3{
-    font-size: 18px;
-    font-weight: bold;
-    font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
-  }
-  
-  .card .stats h4{
-    font-size: 16px;
-    font-weight: bold;
-    font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
-  
-  }
-  
-  .card .stats p{
-    font-size: 14px;
-    font-weight: normal;
-  }
-  .card:hover {
-    border-color: #FFE521;
-    box-shadow: inset 9px -2px 269px -40px  #FFE521;
-    color: #030304
-  }
-}  
-
-
-/*tamaños hasta 768px*/
-@media (max-width: 768px) 
-{ 
-  .listStudents {
-    display: flex;
-    flex-wrap: wrap;
-}
-  .class1{
-    padding-left:8px ;
-    margin-top: 165px;
-    padding: 4%;
-    padding-right: 10% 
-  }
-  
-  header{
-    margin: 0;
-    padding: 0;
-    background-color : #FFE521;
-    top: 0;
-    left: auto;
-    right: 0;
-    position: fixed;
-    width: 100%;
-    height: 20.6%;
-    background-image: none;
-  }
-
-  .card {
-    border: 1px solid #000;
-    padding: 5px;
-    margin: 10px;
-    box-sizing: border-box;
-    flex-grow: 1;
-    border-radius: 5px;
-   box-shadow: -1px 7px 16px -1px rgba(0,0,0,1);
-    border: groove;
-    background-color:#fff;
-    border-top: 1px solid transparent; 
-    border-bottom: 1px solid transparent; 
-    margin-right: 15px;
-    padding-right: 40px
-  }
-  
-  .card .avatar {
-    width: 100px;
-    box-sizing: border-box;
-    float: right;
-    margin-right: -35px;
-    margin-top: 50px
-  }
-  
-  .card .avatar img {
-    max-width: 100%;
-  }
-  
-  .card .stats {
-    width: 70%;
-    box-sizing: border-box;
-    float: left;
-    padding: 5px;
-    font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
-  }
-  
-  .card .stats h3{
-    font-size: 18px;
-    font-weight: bold;
-    font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
-  }
-  
-  .card .stats h4{
-    font-size: 16px;
-    font-weight: bold;
-    font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
-  
-  }
-  
-  .card .stats p{
-    font-size: 14px;
-    font-weight: normal;
-  }
-  .card:hover {
-    border-color: #FFE521;
-    box-shadow: inset 9px -2px 269px -40px  #FFE521;
-    color: #030304
-  }
-}  
-@media (max-width: 755px) {
-  .card{    border-top: 1px solid transparent; 
-    border-bottom: 1px solid transparent; }
-
-.card .avatar {
-  width: 165px;
-  box-sizing: border-box;
-  float: left;
-  margin-left: 25%;
-  margin-top: -2%
-  
-}
-
-.card .avatar img {
-  max-width: 100%;
-}
- .card .stats {
-    width: 70%;
-    box-sizing: border-box;
-    float: left;
-    padding: 5px;
-    font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
-  }
-  
-  .card .stats h3{
-    font-size: 18px;
-    font-weight: bold;
-    font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
-  }
-  
-  .card .stats h4{
-    font-size: 16px;
-    font-weight: bold;
-    font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
-  
-  }
-  
-} 
-/*tamaños hasta 576px*/
-@media (max-width: 576px) {
-  .class1{
-    padding-left:8px ;
-    margin-top: 165px;
-    padding-left: 10%; 
-    padding-right: 10%; 
-  }
-  
-  header{
-    margin: 0;
-    padding: 0;
-    background-color : #FFE521;
-    top: 0;
-    left: auto;
-    right: 0;
-    position: fixed;
-    width: 100%;
-    height: 20.6%;
-    background-image: none;
-  }
-
-  .card {
-
-    max-width: 80%;
-    padding: 5px;
-    margin: 10px;
-    box-sizing: border-box;
-    flex-grow: 1;
-    border-radius: 5px;
-   box-shadow: -1px 7px 16px -1px rgba(0,0,0,1);
-    border: groove;
-    background-color:#fff;
-    border-top: 1px solid transparent; 
-    border-bottom: 1px solid transparent; 
-  }
-  
-  .card .avatar {
-    width: 165px;
-    box-sizing: border-box;
-    float: left;
-    margin-left: 30%;
-    margin-top: -2%
-    
-  }
-  
-  .card .avatar img {
-    max-width: 100%;
-  }
-  
-  .card .stats {
-    width: 70%;
-    box-sizing: border-box;
-    float: left;
-    padding: 5px;
-    font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
-  }
-  
-  .card .stats h3{
-    font-size: 18px;
-    font-weight: bold;
-    font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
-  }
-  
-  .card .stats h4{
-    font-size: 16px;
-    font-weight: bold;
-    font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
-  
-  }
-  
-  .card .stats p{
-    font-size: 14px;
-    font-weight: normal;
-  }
-  .card:hover {
-    border-color: #FFE521;
-    box-shadow: inset 9px -2px 269px -40px  #FFE521;
-    color: #030304
-  }
-  label,select,span{
-  }
-}
