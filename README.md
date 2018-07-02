@@ -222,7 +222,7 @@ luego de acomodar nuestras ideas y tener claro que queremos hacer ,realizamos la
 
 ![9](https://user-images.githubusercontent.com/39390011/41486856-bd8bc2ca-70ab-11e8-9607-88a4e3c10d52.jpg)
 
-### Diseño de la Interfaz de Usuario (prototipo de alta fidelidad)
+### Diseño de la Interfaz de Usuario (prototipo de alta fidelidad) 💡👩🏽‍💻
 
 Este diseño tiene representado nuestro _ideal_ de solución.
 se creo el wireframe de alta fidelidad mediante figma.
@@ -264,7 +264,10 @@ se creo el wireframe de alta fidelidad mediante figma.
 ### Implementación de la Interfaz de Usuario (HTML/CSS/JS)
 
 Esta es la version real y lograda del proyecto,usamos herramientas como HTML,Java Script y Css
-Tomamos en cuenta los principios del diseño responsivo yn el mobile first.
+Tomamos en cuenta los principios del diseño responsivo y mobile first.
+ 
+ ![mobilefirst](https://user-images.githubusercontent.com/39390011/42178871-85d20da4-7df7-11e8-9e0c-157c0f96368f.PNG
+
 
 * vista de 1200 pixeles a mayor medida
 
@@ -290,7 +293,7 @@ Tomamos en cuenta los principios del diseño responsivo yn el mobile first.
 
 ![gif1 nombres](https://user-images.githubusercontent.com/39390011/42178110-c1bb6a5c-7df4-11e8-8f51-e1fe693e2754.gif)
 
-* no obstante añadimos otros tipos de filtrado por porcentaje de completitud total,porcentaje de ejercicios auto-corregidos,porcentaje de cuestionarios completados,puntuacion promedio en cuestionarios completados , y finalmente de lecturas completadas ,cada una con su opcion de filtrado ascendente y descendente
+* no obstante añadimos otros tipos de filtrado por porcentaje de completitud total,porcentaje de ejercicios auto-corregidos, porcentaje de cuestionarios completados, puntuacion promedio en cuestionarios completados , y finalmente de lecturas completadas, cada una con su opcion de filtrado ascendente y descendente
 
 ![gif avances](https://user-images.githubusercontent.com/39390011/42178099-b28be3ea-7df4-11e8-8430-73d642901ebd.gif)
 
