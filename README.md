@@ -264,9 +264,9 @@ se creo el wireframe de alta fidelidad mediante figma.
 ### Implementación de la Interfaz de Usuario (HTML/CSS/JS)
 
 Esta es la version real y lograda del proyecto,usamos herramientas como HTML,Java Script y Css
-Tomamos en cuenta los principios del diseño responsivo y mobile first.
+Tomamos en cuenta los principios del diseño responsivo y mobile first (uso de media queries).
  
- ![mobilefirst](https://user-images.githubusercontent.com/39390011/42178871-85d20da4-7df7-11e8-9e0c-157c0f96368f.PNG
+ ![mobilefirst](https://user-images.githubusercontent.com/39390011/42178871-85d20da4-7df7-11e8-9e0c-157c0f96368f.PNG)
 
 
 * vista de 1200 pixeles a mayor medida
