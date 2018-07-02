@@ -224,43 +224,60 @@ luego de acomodar nuestras ideas y tener claro que queremos hacer ,realizamos la
 
 ### Diseño de la Interfaz de Usuario (prototipo de alta fidelidad)
 
-Lo siguiente es diseñar tu Interfaz de Usuario (UI por sus siglas en inglés).
-Para eso debes aprender a utilizar alguna herramienta de diseño visual.
-Nosotros te recomendamos [Figma](https://www.figma.com/) que  es una herramienta
-que funciona en el navegador y, además, puedes crear una cuenta gratis. Sin
-embargo, eres libre de utilizar otros editores gráficos como
-Illustrator, Photoshop, PowerPoint, Keynote, etc.
+Este diseño tiene representado nuestro _ideal_ de solución.
+se creo el wireframe de alta fidelidad mediante figma.
+* vista 1:
+![1 2](https://user-images.githubusercontent.com/39390011/42146351-e03a1ad6-7d8c-11e8-9a38-271da0c5784d.jpg)
 
-El diseño debe representar tu _ideal_ de solución. Digamos que es lo que
-desearías implementar si tuvieras tiempo ilimitado para hackear.
+* vista 2:
 
-Tu diseño debe seguir los fundamentos de _visual design_, como:
-contraste, alineación, jerarquía, entre otros. Tip: revisa el contenido de UX
-de la unidad de visual design.
+![2](https://user-images.githubusercontent.com/39390011/42146352-e05e0d56-7d8c-11e8-9237-ef3d51f37b2b.jpg)
+
+* vista 3:
+
+![3](https://user-images.githubusercontent.com/39390011/42146353-e0a946ea-7d8c-11e8-8610-4a03def23d1d.jpg)
+
+* vista 4:
+
+![4](https://user-images.githubusercontent.com/39390011/42146355-e0cdad96-7d8c-11e8-9dd8-e26534e15a2a.jpg)
+
+
+* vista 5:
+
+![5](https://user-images.githubusercontent.com/39390011/42146356-e0eede58-7d8c-11e8-8769-f7003791d2a7.jpg)
+
+* vista 6:
+
+![6](https://user-images.githubusercontent.com/39390011/42146357-e135a72a-7d8c-11e8-880c-cc79a1ffe5a4.jpg)
+
+* vista 7:
+
+![7](https://user-images.githubusercontent.com/39390011/42146349-dfa0bf6c-7d8c-11e8-80b0-6b29d021516b.jpg)
+
+* vista 8:
+
+![8](https://user-images.githubusercontent.com/39390011/42146350-e0110a6a-7d8c-11e8-85c5-fb2408af7ea7.jpg)
+
+
+
 
 ### Implementación de la Interfaz de Usuario (HTML/CSS/JS)
 
-Luego de diseñar tu interfaz de usuario deberás trabajar en su implementación.
-Como mencionamos, **no** es necesario que construyas la interfaz tal como la
-diseñaste. Tendrás un tiempo limitado para hackear, así es que deberás priorizar.
+Esta es la version real y lograda del proyecto,usamos herramientas como HTML,Java Script y Css
+Tomamos en cuenta los principios del diseño responsivo yn el mobile first.
 
-Como mínimo, tu implementación debe:
+* vista de 1200 pixeles a mayor medida
 
-1. Permitir al usuario seleccionar un cohort de una lista de cohorts.
-2. Al seleccionar un cohort:
-   - Listar las estudiantes de ese cohort
-   - Para cada estudiante:
-     + Calcular porcentaje de completitud de todos los _cursos_.
-     + Calcular grado de completitud de _lecturas_, _ejercicios autocorregidos_,
-       y _quizzes_.
-   - Ordenar estudiantes por completitud _general_ (porcentaje consumido/completado
-     de todos los cursos del cohort en cuestión), de _lecturas_, _ejercicios
-     autocorregidos_ y _quizzes_.
-   - Filtrar/buscar estudiantes por nombre.
-3. Visualizarse sin problemas desde distintos tamaños de pantallas: móviles,
-   tablets y desktops.
-4. Incluir pruebas unitarias.
+![1](https://user-images.githubusercontent.com/39390011/42146634-994eabb2-7d8e-11e8-8a6d-1e351843489e.JPG)
 
-Es importante que tu interfaz, a pesar de ser una versión mínima de tu ideal,
-igual debe seguir los fundamentos de visual design, como: contraste,
-alineación, jerarquía, entre otros.
+* vista de 720 pixeles a mayor medida 
+
+![2](https://user-images.githubusercontent.com/39390011/42146635-996a9d5e-7d8e-11e8-9c2e-3ab89be93e74.JPG)
+
+* vista de 576 pixeles a mayor medida
+
+![3](https://user-images.githubusercontent.com/39390011/42146636-99864392-7d8e-11e8-914e-a06999ab501d.JPG)
+
+* vista de 260 pixeles a mayor medida
+
+![4](https://user-images.githubusercontent.com/39390011/42146633-992ceab8-7d8e-11e8-8c00-ada5131171bd.JPG)
