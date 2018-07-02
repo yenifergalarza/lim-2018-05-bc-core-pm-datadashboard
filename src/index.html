@@ -1,54 +1,36 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Data Dashboard</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <header id="menu">
-      <section class="headerstyle" >
-       
-          <img class="logo1" src="imagen/logo1.png"/>
-          <div class="sedes">  
-          <label class="text">Grupo</label>
-           <select id="cohorts"></select>
-          <span class="text" id="name"></span>
-          <img class="logo2" src="imagen/usuario.png"/>
 
-          </div>
-        </section>
-         
-    </header>
-  
+<head>
+  <meta charset="utf-8">
+  <title>Data Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <header id="menu">
+    <section class="headerstyle">
+
+      <img class="logo1" src="imagen/logo1.png" />
+      <div class="sedes">
+        <label class="text">Grupo</label>
+        <select id="cohorts">
+          <option disabled selected>Seleccione un grupo</option>
+        </select>
+        <span class="text" id="welcome"></span>
+        <img class="logo2" src="imagen/usuario.png" />
+
+      </div>
+    </section>
+
+  </header>
+
   <div id="styleChangeHtml" class="class1">
-     <main >
+    <main>
+      <div class="filters" id="divfilter">
         <label>Ordenar por nombre:</label>
-       <input type="text" id="orderByFilter">
-     
-       <label>Ordenar por:</label>
-
-       <select id="orderBy">
-         <option value="name">Nombre</option>
-         <option value="percent">Porcentaje de completitud total</option>
-         <option value="exercisesPercent">Porcentaje de ejercicios autocorregidos completados</option>
-         <option value="quizzesPercent">Porcentaje de cuestionarios completados</option>
-         <option value="quizzesScoreAvg">Puntuación promedio en cuestionarios completados</option>
-         <option value="readsPercent">Porcentaje de lecturas completadas</option>
-       </select>
- 
-       <select id="orderDirection">
-         <option value="ASC">Ascendente</option>
-         <option value="DESC">Descendente</option>
-       </select>
- 
-       <button id="sort">Ordenar</button>
-       
-       <br><br>
-       <section id="listStudents" class="listStudents">
-        
+        <input type="text" id="orderByFilter">
         <label>Ordenar por:</label>
-
         <select id="orderBy">
           <option value="name">Nombre</option>
           <option value="percent">Porcentaje de completitud total</option>
@@ -57,22 +39,23 @@
           <option value="quizzesScoreAvg">Puntuación promedio en cuestionarios completados</option>
           <option value="readsPercent">Porcentaje de lecturas completadas</option>
         </select>
- 
         <select id="orderDirection">
           <option value="ASC">Ascendente</option>
           <option value="DESC">Descendente</option>
         </select>
         <button id="sort">Ordenar</button>
-        <br><br>
-        <section id="listStudents" class="listStudents">
-        </section>
-      </main>    
-    </div> 
-    <script src="data.js"></script> 
-    <script src="main.js"></script>
+      </div>
+      <section id="listStudents" class="listStudents">
+        <div class="welcome">
+          <h1 class="title">Bienvenido a este Dashboard</h1>
+          <p class="message">Este dashboard esta creado para poder ver la evolución de las alumnas de Laboratoria en el LMS (Learning Management System).</p>
+        </div> 
+      </section>
+    </main>
+  </div>
+  <script src="data.js"></script>
+  <script src="main.js"></script>
 
-  </body>
+</body>
+
 </html>
-
-
-

@@ -1,40 +1,48 @@
-
-
 @import url('https://fonts.googleapis.com/css?family=Roboto');
+.filters {
+  margin-bottom: 20px;
+  display: none;
+}
+.welcome {
+  width: 100%;
+}
+.listStudents .title {
+  text-align: center;
+}
+.listStudents .message {
+  text-align: center;
+  font-weight: normal;
+}
 @media (min-width: 320px) {
-
-  .logo2{
-    display:none;
+  .logo2 {
+    display: none;
   }
-  *{
-  margin:0px;
-  padding: 0px;
-  font-family: 'Roboto', sans-serif;
-}
-body{
-  margin: 0;
-  padding: 0;
-  background-color:#F5F5F5;
-  
-}
-
-section{ 
-  flex-wrap: nowrap;
- }
- div.sedes{
-  width: calc(100% - 300px);
-  padding-left: 10%;
-  align-items: center;
-}
-select #cohorts{
-  padding-left: 50%;
-  align-items: center;
-}
-
-  header{
+  * {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Roboto', sans-serif;
+  }
+  body {
     margin: 0;
     padding: 0;
-    background-color : #FFE521;
+    background-color: #F5F5F5;
+  }
+  section {
+    flex-wrap: nowrap;
+  }
+  div.sedes {
+    width: calc(100% - 300px);
+    padding-left: 10%;
+    align-items: center;
+  }
+  select #cohorts {
+    padding-left: 50%;
+    align-items: center;
+  }
+  header {
+    margin: 0;
+    padding: 0;
+    background-color: #FFE521;
     top: 0;
     left: auto;
     right: 0;
@@ -46,93 +54,70 @@ select #cohorts{
     background-size: 150px;
     background-position-x: 95%;
   }
-
-.vistaclick{
-  padding-left:0px;
-}
-p{ 
-   margin: 0;
-  padding: 0;
-  
-  font-size: 1.3125rem;
-  font-weight: 700;
-  line-height: 1.16667em;
-  
- } 
- .text
-  {
-   color :white;
-    padding-left:0%;
-  font-size: 20px;
-}
- 
-   .logo1
-   {
-     width: 250px;
+  .vistaclick {
+    padding-left: 0px;
+  }
+  p {
+    margin: 0;
+    padding: 0;
+    font-size: 1.3125rem;
+    font-weight: 700;
+    line-height: 1.16667em;
+  }
+  .text {
+    color: white;
+    padding-left: 0%;
+    font-size: 20px;
+  }
+  .logo1 {
+    width: 250px;
     height: 5%;
-  
- }
-  
- 
-
-  article
-  {
+  }
+  article {
     display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-   align-content: center;
-  
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: center;
   }
-
-.headerstyle{
-  margin: 20px center;
- 
-  border:10px;
-  
- }
- .filtros{
-  padding-left: 17px;}
- 
-   
-   .students{
-     border-color: #0f0f0f
-   }
-   .class1{
-    padding-left:8px ;
+  .headerstyle {
+    margin: 20px center;
+    border: 10px;
+  }
+  .filtros {
+    padding-left: 17px;
+  }
+  .students {
+    border-color: #0f0f0f
+  }
+  .class1 {
+    padding-left: 8px;
     margin-top: 45px;
-    padding-left: 10%; 
-    padding-right: 10%; 
+    padding-left: 10%;
+    padding-right: 10%;
   }
-  
-
   .card {
-
     max-width: 80%;
     padding: 5px;
     margin: 10px;
     box-sizing: border-box;
     flex-grow: 1;
     border-radius: 5px;
-   box-shadow: -1px 7px 16px -1px rgba(0,0,0,1);
+    box-shadow: -1px 7px 16px -1px rgba(0, 0, 0, 1);
     border: groove;
-    background-color:#fff;
-    border-top: 1px solid transparent; 
-    border-bottom: 1px solid transparent; 
+    background-color: #fff;
+    border-top: 1px solid transparent;
+    border-bottom: 1px solid transparent;
   }
-  
   .card .avatar {
     width: 165px;
     box-sizing: border-box;
     float: left;
     margin-left: 30%;
     margin-top: -2%
-    
   }
-  
   .card .avatar img {
     max-width: 100%;
   }
-  
   .card .stats {
     width: 70%;
     box-sizing: border-box;
@@ -140,306 +125,275 @@ p{
     padding: 5px;
     font-family: 'Roboto', sans-serif;
   }
-  
-  .card .stats h3{
+  .card .stats h3 {
     font-size: 18px;
     font-weight: bold;
     font-family: 'Roboto', sans-serif;
   }
-  
-  .card .stats h4{
+  .card .stats h4 {
     font-size: 16px;
     font-weight: bold;
     font-family: 'Roboto', sans-serif;
-  
   }
-  
-  .card .stats p{
+  .card .stats p {
     font-size: 14px;
     font-weight: normal;
     font-family: 'Roboto', sans-serif;
-
   }
   .card:hover {
     border-color: #FFE521;
-    box-shadow: inset 9px -2px 269px -40px  #FFE521;
+    box-shadow: inset 9px -2px 269px -40px #FFE521;
     color: #030304
   }
- 
-
-.listStudents{
-  display: flex;
-  flex-wrap: wrap; /* evita que todos los .card esten en una fila*/
-}
-
-}
-
-@media (min-width: 576px){
-  .logo2{display:none;
-
- }
-  .class1{
-    padding-left:5% ;
-    padding-right:8px ;
-    margin-top: 45px;}
-    .logo1 {
-      width: 300px;
-      height: 62.8px;
-      margin-left: 25.5%;
+  .listStudents {
+    display: flex;
+    flex-wrap: wrap;
+    /* evita que todos los .card esten en una fila*/
   }
-  
-  section{ 
+}
+
+@media (min-width: 576px) {
+  .logo2 {
+    display: none;
+  }
+  .class1 {
+    padding-left: 5%;
+    padding-right: 8px;
+    margin-top: 45px;
+  }
+  .logo1 {
+    width: 300px;
+    height: 62.8px;
+    margin-left: 25.5%;
+  }
+  section {
     flex-wrap: nowrap;
-   }
-   label.text{
-     font-size: 20px;
-     padding-left:55%
-   }
-   span.text{
+  }
+  label.text {
+    font-size: 20px;
+    padding-left: 55%
+  }
+  span.text {
     font-size: 20px;
     padding-left: 40%;
     margin-right: -20%;
   }
- .sedes{
-     margin-right: 0px;
+  .sedes {
+    margin-right: 0px;
     width: calc(100% - 300px);
     padding-left: 15%;
     align-items: center;
   }
-   #cohorts{
+  #cohorts {
     margin-left: 15.5%;
     align-items: center;
   }
-    header{
-      width: 100%;
-      height: 22.6%;
-      background-image: url(imagen/flechasrosadas.png);
-      background-repeat:no-repeat;
-      background-size: 150px;
-      background-position-x: 95%;
-      background-position-y: 10px;
-    }
-   .headerstyle{
-      background-image: url(imagen/flechasrosadas2.png);
-      background-repeat: repeat-y;
-      background-size: 150px;
-      background-position-x: 5%;
-      background-position-y: 10px;
-      background-repeat:no-repeat;
-    }
-  
+  header {
+    width: 100%;
+    height: 22.6%;
+    background-image: url(imagen/flechasrosadas.png);
+    background-repeat: no-repeat;
+    background-size: 150px;
+    background-position-x: 95%;
+    background-position-y: 10px;
+  }
+  .headerstyle {
+    background-image: url(imagen/flechasrosadas2.png);
+    background-repeat: repeat-y;
+    background-size: 150px;
+    background-position-x: 5%;
+    background-position-y: 10px;
+    background-repeat: no-repeat;
+  }
   .card {
-
     max-width: 45%;
     padding: 5px;
     margin: 10px;
     box-sizing: border-box;
     flex-grow: 1;
     border-radius: 5px;
-   box-shadow: -1px 7px 16px -1px rgba(0,0,0,1);
+    box-shadow: -1px 7px 16px -1px rgba(0, 0, 0, 1);
     border: groove;
-    background-color:#fff;
-    border-top: 1px solid transparent; 
-    border-bottom: 1px solid transparent; 
+    background-color: #fff;
+    border-top: 1px solid transparent;
+    border-bottom: 1px solid transparent;
   }
-  
   .card .avatar {
     width: 165px;
     box-sizing: border-box;
     float: left;
     margin-left: 30%;
     margin-top: -2%
-    
   }
-  
   .card .avatar img {
     max-width: 100%;
   }
-  
-  
   .card:hover {
     border-color: #FFE521;
-    box-shadow: inset 9px -2px 269px -40px  #FFE521;
+    box-shadow: inset 9px -2px 269px -40px #FFE521;
     color: #030304
   }
 }
-@media(min-width:650px){
+
+@media(min-width:650px) {
   .logo1 {
     width: 300px;
     height: 65.8px;
     margin-left: 32.5%;
+  }
 }
 
-}
-
-@media(min-width:640px){
+@media(min-width:640px) {
   .logo1 {
     width: 300px;
     height: 65.8px;
-    margin-left: 28.5%;}
-}
-@media (min-width: 732px){
-section{ display: flex;
-  flex-wrap: nowrap;
- }
-header{
-  width: 100%;
-  height: 10.6%;
-  background-image: url(imagen/flechasrosadas.png);
-  background-repeat: no-repeat;
-  background-size: 100px;
-  background-position-x: 95%;
-  background-position-y: 0%;
-}
-.logo2{
-  width: 60px;
-  height: 60px;
-  margin-top: -0.5%;
- display: block;
- margin-left: 20%;
+    margin-left: 28.5%;
+  }
 }
 
-select{align-items: center;}
-.vistaclick{padding-left:0px;}
-p{  margin: 0;
-  padding: 0;
-  
-  font-size: 1.3125rem;
-  font-weight: 700;
-  font-family: bitter, "Helvetica Neue", Arial, sans-serif;
-  line-height: 1.16667em;
-  
- } 
- .logo1 {
-  margin-left: 0%;
-  width: 250px;
-  height: 5%;}
-
-.class1 {
-  padding-left: 5%;
-  padding-right: 8px;
-  margin-top: 50px;
-}
-
- label.text{ 
-   padding-left: 0%;}
-   span.text{
-     padding-left: 0%;}
-.headerstyle{
-   background-image:none;
- }
- .filtros{
-  padding-left: 17px;}
- 
- 
-div.sedes{
-  width: calc(100% - 300px);
-  flex: 0 1 auto;
-  display: flex;
-    margin-left:0%;
+@media (min-width: 732px) {
+  section {
+    display: flex;
+    flex-wrap: nowrap;
+  }
+  header {
+    width: 100%;
+    height: 10.6%;
+    background-image: url(imagen/flechasrosadas.png);
+    background-repeat: no-repeat;
+    background-size: 100px;
+    background-position-x: 95%;
+    background-position-y: 0%;
+  }
+  .logo2 {
+    width: 60px;
+    height: 60px;
+    margin-top: -0.5%;
+    display: block;
+    margin-left: 20%;
+  }
+  select {
+    align-items: center;
+  }
+  .vistaclick {
+    padding-left: 0px;
+  }
+  p {
+    margin: 0;
+    padding: 0;
+    font-size: 1.3125rem;
+    font-weight: 700;
+    font-family: bitter, "Helvetica Neue", Arial, sans-serif;
+    line-height: 1.16667em;
+  }
+  .logo1 {
+    margin-left: 0%;
+    width: 250px;
+    height: 5%;
+  }
+  .class1 {
+    padding-left: 5%;
+    padding-right: 8px;
+    margin-top: 50px;
+  }
+  label.text {
     padding-left: 0%;
-  align-items: center;
-
+  }
+  span.text {
+    padding-left: 0%;
+  }
+  .headerstyle {
+    background-image: none;
+  }
+  .filtros {
+    padding-left: 17px;
+  }
+  div.sedes {
+    width: calc(100% - 300px);
+    flex: 0 1 auto;
+    display: flex;
+    margin-left: 0%;
+    padding-left: 0%;
+    align-items: center;
+  }
+  #cohorts {
+    margin-left: 0%;
+  }
+  .students {
+    border-color: #0f0f0f
+  }
+  .listStudents {
+    display: flex;
+    flex-wrap: wrap;
+    /* evita que todos los .card esten en una fila*/
+  }
+  .card {
+    border: 1px solid #000;
+    width: 32%;
+    max-width: 32%;
+    padding: 5px;
+    margin: 10px;
+    box-sizing: border-box;
+    flex-grow: 1;
+    border-radius: 5px;
+    box-shadow: -1px 7px 16px -1px rgba(0, 0, 0, 1);
+    border: groove;
+    background-color: #fff;
+  }
+  .card .avatar {
+    width: 30%;
+    box-sizing: border-box;
+    float: left;
+    padding: 5px;
+    margin-left: 0%;
+  }
+  .card .avatar img {
+    max-width: 100%;
+  }
 }
-#cohorts {
-  margin-left: 0%;
-  
-}
-   .students{
-     border-color: #0f0f0f
-   }
 
-
-.listStudents{
-  display: flex;
-  flex-wrap: wrap; /* evita que todos los .card esten en una fila*/
-}
-
-.card {
-  border: 1px solid #000;
-  width: 32%;
-  max-width: 32%;
-  padding: 5px;
-  margin: 10px;
-  box-sizing: border-box;
-  flex-grow: 1;
-  border-radius: 5px;
- 
-  box-shadow: -1px 7px 16px -1px rgba(0,0,0,1);
-  border: groove;
-  background-color:#fff;
-
-
-
-}
-
-.card .avatar {
-  width: 30%;
-  box-sizing: border-box;
-  float: left;
-  padding: 5px;
-  margin-left: 0%; 
-}
-
-.card .avatar img {
-  max-width: 100%;
-}
-}
-@media (min-width: 1200px){
-  div.sedes{
+@media (min-width: 1200px) {
+  div.sedes {
     flex: 0 1 auto;
     display: flex;
   }
-
-.card {
-  border: 1px solid #000;
-  width: 32%;
-  max-width: 22%;
-  padding: 5px;
-  margin: 10px;
-  box-sizing: border-box;
-  flex-grow: 1;
-  border-radius: 5px;
- 
-  box-shadow: -1px 7px 16px -1px rgba(0,0,0,1);
-  border: groove;
-  background-color:#fff;
-
-
-
+  .card {
+    border: 1px solid #000;
+    width: 32%;
+    max-width: 22%;
+    padding: 5px;
+    margin: 10px;
+    box-sizing: border-box;
+    flex-grow: 1;
+    border-radius: 5px;
+    box-shadow: -1px 7px 16px -1px rgba(0, 0, 0, 1);
+    border: groove;
+    background-color: #fff;
+  }
+  .card .avatar {
+    width: 30%;
+    box-sizing: border-box;
+    float: left;
+    padding: 5px;
+  }
+  .card .avatar img {
+    max-width: 100%;
+  }
+  .card .stats {
+    width: 70%;
+    box-sizing: border-box;
+    float: left;
+    padding: 5px;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+  }
+  .card .stats h3 {
+    font-size: 18px;
+    font-weight: bold;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+  }
+  .card .stats h4 {
+    font-size: 16px;
+    font-weight: bold;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+  }
 }
-
-.card .avatar {
-  width: 30%;
-  box-sizing: border-box;
-  float: left;
-  padding: 5px;
-}
-
-.card .avatar img {
-  max-width: 100%;
-}
-
-.card .stats {
-  width: 70%;
-  box-sizing: border-box;
-  float: left;
-  padding: 5px;
-  font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
-}
-
-.card .stats h3{
-  font-size: 18px;
-  font-weight: bold;
-  font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
-}
-
-.card .stats h4{
-  font-size: 16px;
-  font-weight: bold;
-  font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
-
-}
-
-}
-
