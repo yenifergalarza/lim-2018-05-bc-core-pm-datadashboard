@@ -1,18 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto');
-.filters {
-  margin-bottom: 20px;
-  display: none;
-}
-.welcome {
-  width: 100%;
-}
-.listStudents .title {
-  text-align: center;
-}
-.listStudents .message {
-  text-align: center;
-  font-weight: normal;
-}
+
 @media (min-width: 320px) {
   .logo2 {
     display: none;
