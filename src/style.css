@@ -1,6 +1,4 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto');
-<<<<<<< HEAD
-=======
 .filters {
     margin-bottom: 20px;
     display: none;
@@ -18,7 +16,6 @@
     text-align: center;
     font-weight: normal;
 }
->>>>>>> fa1ab0daeec77911ec71850c7aefad3c65458a2c
 
 @media (min-width: 320px) {
     .logo2 {
