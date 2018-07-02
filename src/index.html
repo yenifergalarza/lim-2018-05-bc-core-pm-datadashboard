@@ -7,84 +7,48 @@
   </head>
   <body>
     <header id="menu">
-      
       <section class="headerstyle" >
-       
-          <img class="logo1" src="imagen/logo1.png"/>
-          <div class="sedes">  
-          <label class="text">Grupo</label>
-           <select id="cohorts"></select>
-          <span class="text" id="name"></span>
-
-          </div>
-        </section>
+        <img class="logo1" src="imagen/logo1.png"/>
+        <div class="sedes">  
+        <label class="text">Grupo</label>
+          <select id="cohorts">
+            <option disabled selected>Seleccione un grupo</option>
+          </select>
+        <span class="text" id="name"></span>
+        </div>
+      </section>
          
     </header>
   
-  <div id="styleChangeHtml" class="class1">
-     <main >
-       <input type="text" id="orderByFilter">
-       <div id="barra" >
-      cohorts_disponibles :<progress min="0" max="100" value="35" ></progress>
-       </div>
-       <label>Ordenar por:</label>
-
-       <select id="orderBy">
-         <option value="name">Nombre</option>
-         <option value="percent">Porcentaje de completitud total</option>
-         <option value="exercisesPercent">Porcentaje de ejercicios autocorregidos completados</option>
-         <option value="quizzesPercent">Porcentaje de cuestionarios completados</option>
-         <option value="quizzesScoreAvg">Puntuación promedio en cuestionarios completados</option>
-         <option value="readsPercent">Porcentaje de lecturas completadas</option>
-       </select>
- 
-       <select id="orderDirection">
-         <option value="ASC">Ascendente</option>
-         <option value="DESC">Descendente</option>
-       </select>
- 
-       <button id="sort">Ordenar</button>
-       
-       <br><br>
-       <section id="listStudents" class="listStudents">
-        <!--
-        <div class="card">
-          <div class="avatar">
-            <img src="imagen/avatar.png" alt="Virginia Mirella Contreras Villafuerte">
-          </div>
-          <div class="stats">
-            <h3>Virginia Mirella Contreras Villafuerte</h3>
-            <p>% de completitud total: 100</p>
-            <h4>Ejercicios</h4>
-            <p>% autocorregidos completados: 100</p>
-            <h4>Cuestionarios</h4>
-            <p>% completados: 100</p>
-            <p>Puntuaci&oacute;n promedio completados: 100</p>
-            <h4>Lecturas</h4>
-            <p>% completadas: 100</p>
-          </div>
+    <div id="styleChangeHtml" class="class1">
+      <main >
+        <input type="text" id="orderByFilter">
+        <div id="barra" >
+          <label>cohorts_disponibles :</label><progress min="0" max="100" value="35" ></progress>
         </div>
-        -->
-       </section>
+        <label>Ordenar por:</label>
+
+        <select id="orderBy">
+          <option value="name">Nombre</option>
+          <option value="percent">Porcentaje de completitud total</option>
+          <option value="exercisesPercent">Porcentaje de ejercicios autocorregidos completados</option>
+          <option value="quizzesPercent">Porcentaje de cuestionarios completados</option>
+          <option value="quizzesScoreAvg">Puntuación promedio en cuestionarios completados</option>
+          <option value="readsPercent">Porcentaje de lecturas completadas</option>
+        </select>
  
-       <!-- <table id="students">
-        <thead>
-          <tr>
-            <th>Nombre</th>
-            <th>% completitud</th>
-            <th>Total Ejercicios</th>
-            <th>Completitud Ejercicios</th>
-            <th>% Completitud Ejercicios</th>
-          </tr>
-        </thead>
-        <tbody id="listStudents">
-          
-        </tbody>
-      </table> -->
-    </main>    
-  </div> 
-       <script src="data.js"></script> 
-       <script src="main.js"></script>
+        <select id="orderDirection">
+          <option value="ASC">Ascendente</option>
+          <option value="DESC">Descendente</option>
+        </select>
+        <button id="sort">Ordenar</button>
+        <br><br>
+        <section id="listStudents" class="listStudents">
+        </section>
+      </main>    
+    </div> 
+    <script src="data.js"></script> 
+    <script src="main.js"></script>
 
   </body>
 </html>

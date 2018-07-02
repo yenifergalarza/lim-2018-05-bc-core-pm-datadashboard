@@ -14,22 +14,22 @@ function yes() {
 //seleccion del nodo padre
 const selectElement = document.getElementById("cohorts");
 //llamamos de forma asincrona el json de la lista de cohorts
-fetch('../data/cohorts.json')
+fetch('https://api.laboratoria.la/cohorts/')
   .then(response => response.json())
   .then(json => {
-    const sedes = json;
-    //    console.log(sedes.length);
+    const listCohorts = json;
     //llamamos la funcion para que pase como argumentos los datos del json y creen un nodo de opction dentro de un select
-    for (let i = 0; i < sedes.length; i++) {
-      //creo el elemento option por cada cohort
-      const optionElements = document.createElement('option');
-      //creo el texto (nodo  de texto)
-      const contenidoOption = document.createTextNode(sedes[i].id);
-      //a la etiqueta padre le doy su hijo
-      optionElements.appendChild(contenidoOption);
-      optionElements.value = sedes[i].id
-      //console.log(sedes[i].id);
-      selectElement.appendChild(optionElements);
+    for (let i = 0; i < listCohorts.length; i++) {
+      if(listCohorts[i].id.includes("lim-2018-03-pre-core")){
+        //creo el elemento option por cada cohort
+        const optionElements = document.createElement('option');
+        //creo el texto (nodo  de texto)
+        const contenidoOption = document.createTextNode(listCohorts[i].id);
+        //a la etiqueta padre le doy su hijo
+        optionElements.appendChild(contenidoOption);
+        optionElements.value = listCohorts[i].id
+        selectElement.appendChild(optionElements);  
+      } 
     }
     //cuando detecte el cambio de esa selecion mediante ese evento escondera un div accediendo mediante el id
     //al elemento select le voy a colocar un evento
@@ -46,9 +46,9 @@ fetch('../data/cohorts.json')
  
 let filterById = document.getElementById("orderByFilter");
 
-const fileCohort = '../data/cohorts.json';
-const fileProgress = '../data/cohorts/lim-2018-03-pre-core-pw/progress.json';
-const fileUsers = '../data/cohorts/lim-2018-03-pre-core-pw/users.json';
+const fileCohort = 'https://api.laboratoria.la/cohorts/';
+const fileProgress = 'https://api.laboratoria.la/cohorts/lim-2018-03-pre-core-pw/progress/';
+const fileUsers = 'https://api.laboratoria.la/cohorts/lim-2018-03-pre-core-pw/users/';
 const urls = [fileCohort, fileProgress, fileUsers];
 let cohorts = [];
 let progress = [];
@@ -71,8 +71,7 @@ buttonSort.addEventListener('click', () => {
 });
 
 selectElement.addEventListener('change', () => {
-  loadStats(); 
-  //mostrar filtros 
+  loadStats();  
 });
 
 const loadStats = () => {

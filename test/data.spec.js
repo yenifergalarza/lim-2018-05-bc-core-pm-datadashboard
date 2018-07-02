@@ -306,7 +306,7 @@ describe('data', () => {
     it('debería retornar arreglo de usuarios con propiedad stats y aplicar sort y filter', () => {
       let cohort = fixtures.cohorts.filter(
         cohort => cohort.id == 'lim-2018-03-pre-core-pw'
-    );
+      );
       const { users, progress } = fixtures;
       const userData = [
         {
@@ -352,8 +352,46 @@ describe('data', () => {
     
       const processed = processCohortData(options); 
       assert.deepEqual(userData, processed);  
-      /* console.log(userData);
-      console.log(processed); */
+      
+
+    });
+
+    it('debería retornar arreglo de usuarios con propiedad stats para una alumna que sus stats estan vacios', () => {
+      let cohort = fixtures.cohorts.filter(
+        cohort => cohort.id == 'lim-2018-03-pre-core-pw'
+      );
+      const { users, progress } = fixtures;
+      const userData = [
+        {
+          id:"JOWii3vYeBW5FAoEP1gOcFl0g0I2",
+          name:"manuela",
+          locale:"es-PE",
+          signupCohort:"lim-2018-03-pre-core-pw",
+          timezone:"America/Lima",
+          role:"student",
+          stats:{
+            percent:0,
+            exercises:{total:2,completed:0,percent:0},
+            reads:{total:11,completed:0,percent:0},
+            quizzes:{total:3,completed:0,percent:0,scoreSum:0,scoreAvg:0}
+          }
+        }
+      ];
+
+      let options = {
+        cohort: cohort,
+        cohortData: {
+            users: users,
+            progress: progress
+        },
+        orderBy: 'name',
+        orderDirection: 'ASC',
+        search: 'manuela'
+      };
+    
+      const processed = processCohortData(options); 
+      assert.deepEqual(userData, processed);  
+      
 
     });
 
