@@ -137,7 +137,7 @@ Los trainning manager de cada sede 🌎 (lima,santiago,sao paulo,guadalajara y c
 * Cómo fue tu proceso de diseño.
 => Fue un proceso de prueba y error,por que teniamos ideas pero no se adecuaban a la necesidad del usuario ,tuvimos que reconsiderar algunos aspectos y regresar al prototipado.
 
-#### Preguntas de la entrevista💭
+### Preguntas de la entrevista💭
  - ¿Quisiera saber en que herramienta trabajas para poder obtener y manejar el grado de completitud de las alumnas en la plataforma (LMS)
  => Utilizo Excel,se me hace pesado trabajar con demasiada informacion en excel por que esa forma de organizacion es abrumadora,pero me gusta tener todos los datos a la mano 
   - ¿Cuanto tiempo trabajas en esta heramienta?
@@ -281,3 +281,18 @@ Tomamos en cuenta los principios del diseño responsivo yn el mobile first.
 * vista de 260 pixeles a mayor medida
 
 ![4](https://user-images.githubusercontent.com/39390011/42146633-992ceab8-7d8e-11e8-8c00-ada5131171bd.JPG)
+
+* otorgamos funcionalidad,por ejemplo el filtrado por nombres y cuando pasemos el mouse(hover) sobre las cards,su sombra cambia de color
+
+![gif nombres](https://user-images.githubusercontent.com/39390011/42178098-b246d50c-7df4-11e8-8fbb-4ef5e8eabd97.gif)
+
+* ademas de poder hacer un filtrado ascendente y descendente ,donde el usuario elige que el tipo de filtrado que quiere ,desea o necesita
+
+![gif1 nombres](https://user-images.githubusercontent.com/39390011/42178110-c1bb6a5c-7df4-11e8-8f51-e1fe693e2754.gif)
+
+* no obstante añadimos otros tipos de filtrado por porcentaje de completitud total,porcentaje de ejercicios auto-corregidos,porcentaje de cuestionarios completados,puntuacion promedio en cuestionarios completados , y finalmente de lecturas completadas ,cada una con su opcion de filtrado ascendente y descendente
+
+![gif avances](https://user-images.githubusercontent.com/39390011/42178099-b28be3ea-7df4-11e8-8430-73d642901ebd.gif)
+
+
+
