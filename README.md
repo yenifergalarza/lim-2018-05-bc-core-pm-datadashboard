@@ -71,42 +71,14 @@ tocará crear un _data dashboard_. Quizás sea para visualizar la data de un
 negocio de delivery de comida, o las rutas históricas de un negocio de
 transporte, o simplemente los indicadores clave de tu propio emprendimiento ;)
 
-## Decisiones de diseño🎨 
-
-* primero boceteamos,nuestras ideas hubieron 2 versiones,pero finalmente descartamos lo que no sirve y utilizamos lo que realmente es util para los usuarios 
-
-En la pagina numero 1 ,se pretende mostrar una version preliminar de la vista 1 que mostrara un porcentaje o promedio de todas las alumnas del cohort por curso
-
-![proto virg2](https://user-images.githubusercontent.com/39390011/41487242-7d287d16-70ad-11e8-9404-c95da88b61dc.jpg)
-
-En la pagina numero 2 ,se pretende mostrar una version preliminar de la vista 2 que mostrara un porcentaje o promedio de por alumna pero antes mostrara una tabla por orden de "merito"
-
-![proto virg1](https://user-images.githubusercontent.com/39390011/41487241-7ca32f08-70ad-11e8-941b-93edd7d96147.jpg)
-
-se pretende presentar una version de las 2 vistas juntas con graficas(barras ,dona) donde se espefica horas de trabajo,quizzes ,practices resueltos yexistentes por unidad
-
-![proto yeni](https://user-images.githubusercontent.com/39390011/41487240-7c7a2d74-70ad-11e8-90b3-602ea4418570.jpg)
+## Decisiones de diseño🎨 💡
 
 * tuvimos varias ideas respecto al color pero finalmente utilizamos los tonos de la marca y decidimos guiarnos de esos parametros
 
 ![logo](https://user-images.githubusercontent.com/39390011/41486589-bb145bf2-70aa-11e8-9db0-622c51b65dfa.png)
 
-* tomamos como prohibido usar lo que nosotros queremos o deseamos para la pagina y tomamos en cuenta las necesidades del usuario,debido a esto creamos uuna "verison 2.0" del boceto
+* tomamos como prohibido usar lo que nosotros queremos o deseamos para la pagina y tomamos en cuenta las necesidades del usuario,debido a esto creamos uuna "version 2.0" del boceto
 
-
-![1](https://user-images.githubusercontent.com/39390011/41488515-342ce6e2-70b2-11e8-9eee-e277f93e6132.jpg)
-
-![2](https://user-images.githubusercontent.com/39390011/41488516-3457353c-70b2-11e8-9bd0-56dd993de7c7.jpg)
-
-![3](https://user-images.githubusercontent.com/39390011/41488518-3484922a-70b2-11e8-8b1a-484fc2154ccb.jpg)
-
-![4](https://user-images.githubusercontent.com/39390011/41488519-349fec00-70b2-11e8-89ad-db51cce99c48.jpg)
-
-![5](https://user-images.githubusercontent.com/39390011/41488520-34da0ce6-70b2-11e8-9fd2-f994c11f3168.jpg)
-
-![6](https://user-images.githubusercontent.com/39390011/41488513-33d546a8-70b2-11e8-9df0-668af0416019.jpg)
-
-![7](https://user-images.githubusercontent.com/39390011/41488514-34022a9c-70b2-11e8-9664-675e67d5be20.jpg)
 
 luego avanzamos con el diseño de la pagina ,el header originalmente fue negro
 
@@ -124,6 +96,24 @@ decidimos invertir el orden de los colores,ahora esta barra sera negra:
 
 ![barra black](https://user-images.githubusercontent.com/39390011/41790248-836598ac-7617-11e8-9fa1-ce73e128250e.PNG)
 
+deidimos esconder momentaneamente la barra de navegacion ,llegaremos a un acuerdo respecto a ello
+
+![codigo del nav borrado](https://user-images.githubusercontent.com/39390011/42058024-a6ea3f68-7ae4-11e8-9f8c-4261498f4ce8.PNG)
+
+pusimos un prompt,el cual requiere que el usuario ponga sus datos
+
+![promp pag](https://user-images.githubusercontent.com/39390011/42058008-a3bdd200-7ae4-11e8-9dec-dca342ff35aa.PNG)
+
+en nuestra version inicial ,todos los datos eran mostrados mediante una tabla 📅 
+
+![version anterio](https://user-images.githubusercontent.com/39390011/42058010-a42d34ba-7ae4-11e8-9440-3e22c31516db.PNG)
+
+![funcionalidad tabla](https://user-images.githubusercontent.com/39390011/42058021-a6c002d4-7ae4-11e8-883e-1d5bb4b5dd8a.gif)
+
+![tabla descendente y nav oculto](https://user-images.githubusercontent.com/39390011/42058009-a3f4b39c-7ae4-11e8-8854-4876711e6b4f.gif)
+
+
+luego de contemplar los pro's y los contras de esta version decidimos crear otra version que mostraba los datos mediante cards📛 📄,ya que la version previa tenia los datos de las alumnas organizado de tal forma que la pagina se veia saturada de informacion
 
 ### Entrevistas📝
 Hicimos 2 entrevistas en la primera presentamos un bosquejo de la pagina:
@@ -147,23 +137,54 @@ Los trainning manager de cada sede 🌎 (lima,santiago,sao paulo,guadalajara y c
 * Cómo fue tu proceso de diseño.
 => Fue un proceso de prueba y error,por que teniamos ideas pero no se adecuaban a la necesidad del usuario ,tuvimos que reconsiderar algunos aspectos y regresar al prototipado.
 
-#### Preguntas de la entrevista💭
+### Preguntas de la entrevista💭
  - ¿Quisiera saber en que herramienta trabajas para poder obtener y manejar el grado de completitud de las alumnas en la plataforma (LMS)
  => Utilizo Excel,se me hace pesado trabajar con demasiada informacion en excel por que esa forma de organizacion es abrumadora,pero me gusta tener todos los datos a la mano 
   - ¿Cuanto tiempo trabajas en esta heramienta?
     => Un dia completo cada 3 semanas
  
  - ¿Que colores de la paleta de laboratoria prefieres?
-   => Amarillo y fucsia
+   => Amarillo y fucsia💛 💖❇️
 
 - ¿A que informacion o dato le otorgas mayor importancia?
-   => Otorgo mayor importancia a los ejercicios y su completitud
+   => Otorgo mayor importancia a los ejercicios y su completitud✔️
   
 
-#### 2) Sketch de la solución (prototipo de baja fidelidad)
+### Sketch de la solución 💡 ✏️
 
-Debes hacer un _sketch_ (boceto) de tu solución usando papel y lápiz, tomarle
-una foto, subirla a tu repositorio y hacer mención del _sketch_ en tu `README.md`.
+* primero boceteamos,nuestras ideas hubieron 2 versiones,pero finalmente descartamos lo que no sirve y utilizamos lo que realmente es util para los usuarios 
+
+En la pagina numero 1 ,se pretende mostrar una version preliminar de la vista 1 que mostrara un porcentaje o promedio de todas las alumnas del cohort por curso
+
+![proto virg2](https://user-images.githubusercontent.com/39390011/41487242-7d287d16-70ad-11e8-9404-c95da88b61dc.jpg)
+
+En la pagina numero 2 ,se pretende mostrar una version preliminar de la vista 2 que mostrara un porcentaje o promedio de por alumna pero antes mostrara una tabla por orden de "merito"🎖
+
+![proto virg1](https://user-images.githubusercontent.com/39390011/41487241-7ca32f08-70ad-11e8-941b-93edd7d96147.jpg)
+
+se pretende presentar una version de las 2 vistas juntas con graficas(barras ,dona) donde se espefica horas de trabajo,quizzes ,practices resueltos y existentes por unidad
+
+![proto yeni](https://user-images.githubusercontent.com/39390011/41487240-7c7a2d74-70ad-11e8-90b3-602ea4418570.jpg)
+
+
+luego de acomodar nuestras ideas y tener claro que queremos hacer ,realizamos las vistas.
+
+![1](https://user-images.githubusercontent.com/39390011/41488515-342ce6e2-70b2-11e8-9eee-e277f93e6132.jpg)
+
+![2](https://user-images.githubusercontent.com/39390011/41488516-3457353c-70b2-11e8-9bd0-56dd993de7c7.jpg)
+
+![3](https://user-images.githubusercontent.com/39390011/41488518-3484922a-70b2-11e8-8b1a-484fc2154ccb.jpg)
+
+![4](https://user-images.githubusercontent.com/39390011/41488519-349fec00-70b2-11e8-89ad-db51cce99c48.jpg)
+
+![5](https://user-images.githubusercontent.com/39390011/41488520-34da0ce6-70b2-11e8-9fd2-f994c11f3168.jpg)
+
+![6](https://user-images.githubusercontent.com/39390011/41488513-33d546a8-70b2-11e8-9df0-668af0416019.jpg)
+
+![7](https://user-images.githubusercontent.com/39390011/41488514-34022a9c-70b2-11e8-9664-675e67d5be20.jpg)
+
+
+### Wireframe de baja fidelidad📐 📝
 
 * vista 1:
 
@@ -201,45 +222,80 @@ una foto, subirla a tu repositorio y hacer mención del _sketch_ en tu `README.m
 
 ![9](https://user-images.githubusercontent.com/39390011/41486856-bd8bc2ca-70ab-11e8-9607-88a4e3c10d52.jpg)
 
-#### 3) Diseño de la Interfaz de Usuario (prototipo de alta fidelidad)
+### Diseño de la Interfaz de Usuario (prototipo de alta fidelidad) 💡👩🏽‍💻
 
-Lo siguiente es diseñar tu Interfaz de Usuario (UI por sus siglas en inglés).
-Para eso debes aprender a utilizar alguna herramienta de diseño visual.
-Nosotros te recomendamos [Figma](https://www.figma.com/) que  es una herramienta
-que funciona en el navegador y, además, puedes crear una cuenta gratis. Sin
-embargo, eres libre de utilizar otros editores gráficos como
-Illustrator, Photoshop, PowerPoint, Keynote, etc.
+Este diseño tiene representado nuestro _ideal_ de solución.
+se creo el wireframe de alta fidelidad mediante figma.
+* vista 1:
+![1 2](https://user-images.githubusercontent.com/39390011/42146351-e03a1ad6-7d8c-11e8-9a38-271da0c5784d.jpg)
 
-El diseño debe representar tu _ideal_ de solución. Digamos que es lo que
-desearías implementar si tuvieras tiempo ilimitado para hackear.
+* vista 2:
 
-Tu diseño debe seguir los fundamentos de _visual design_, como:
-contraste, alineación, jerarquía, entre otros. Tip: revisa el contenido de UX
-de la unidad de visual design.
+![2](https://user-images.githubusercontent.com/39390011/42146352-e05e0d56-7d8c-11e8-9237-ef3d51f37b2b.jpg)
+
+* vista 3:
+
+![3](https://user-images.githubusercontent.com/39390011/42146353-e0a946ea-7d8c-11e8-8610-4a03def23d1d.jpg)
+
+* vista 4:
+
+![4](https://user-images.githubusercontent.com/39390011/42146355-e0cdad96-7d8c-11e8-9dd8-e26534e15a2a.jpg)
+
+
+* vista 5:
+
+![5](https://user-images.githubusercontent.com/39390011/42146356-e0eede58-7d8c-11e8-8769-f7003791d2a7.jpg)
+
+* vista 6:
+
+![6](https://user-images.githubusercontent.com/39390011/42146357-e135a72a-7d8c-11e8-880c-cc79a1ffe5a4.jpg)
+
+* vista 7:
+
+![7](https://user-images.githubusercontent.com/39390011/42146349-dfa0bf6c-7d8c-11e8-80b0-6b29d021516b.jpg)
+
+* vista 8:
+
+![8](https://user-images.githubusercontent.com/39390011/42146350-e0110a6a-7d8c-11e8-85c5-fb2408af7ea7.jpg)
+
+
+
 
 ### Implementación de la Interfaz de Usuario (HTML/CSS/JS)
 
-Luego de diseñar tu interfaz de usuario deberás trabajar en su implementación.
-Como mencionamos, **no** es necesario que construyas la interfaz tal como la
-diseñaste. Tendrás un tiempo limitado para hackear, así es que deberás priorizar.
+Esta es la version real y lograda del proyecto,usamos herramientas como HTML,Java Script y Css
+Tomamos en cuenta los principios del diseño responsivo y mobile first (uso de media queries).
+ 
+ ![mobilefirst](https://user-images.githubusercontent.com/39390011/42178871-85d20da4-7df7-11e8-9e0c-157c0f96368f.PNG)
 
-Como mínimo, tu implementación debe:
 
-1. Permitir al usuario seleccionar un cohort de una lista de cohorts.
-2. Al seleccionar un cohort:
-   - Listar las estudiantes de ese cohort
-   - Para cada estudiante:
-     + Calcular porcentaje de completitud de todos los _cursos_.
-     + Calcular grado de completitud de _lecturas_, _ejercicios autocorregidos_,
-       y _quizzes_.
-   - Ordenar estudiantes por completitud _general_ (porcentaje consumido/completado
-     de todos los cursos del cohort en cuestión), de _lecturas_, _ejercicios
-     autocorregidos_ y _quizzes_.
-   - Filtrar/buscar estudiantes por nombre.
-3. Visualizarse sin problemas desde distintos tamaños de pantallas: móviles,
-   tablets y desktops.
-4. Incluir pruebas unitarias.
+* vista de 1200 pixeles a mayor medida
 
-Es importante que tu interfaz, a pesar de ser una versión mínima de tu ideal,
-igual debe seguir los fundamentos de visual design, como: contraste,
-alineación, jerarquía, entre otros.
+![1](https://user-images.githubusercontent.com/39390011/42146634-994eabb2-7d8e-11e8-8a6d-1e351843489e.JPG)
+
+* vista de 720 pixeles a mayor medida 
+
+![2](https://user-images.githubusercontent.com/39390011/42146635-996a9d5e-7d8e-11e8-9c2e-3ab89be93e74.JPG)
+
+* vista de 576 pixeles a mayor medida
+
+![3](https://user-images.githubusercontent.com/39390011/42146636-99864392-7d8e-11e8-914e-a06999ab501d.JPG)
+
+* vista de 260 pixeles a mayor medida
+
+![4](https://user-images.githubusercontent.com/39390011/42146633-992ceab8-7d8e-11e8-8c00-ada5131171bd.JPG)
+
+* otorgamos funcionalidad,por ejemplo el filtrado por nombres y cuando pasemos el mouse(hover) sobre las cards,su sombra cambia de color
+
+![gif nombres](https://user-images.githubusercontent.com/39390011/42178098-b246d50c-7df4-11e8-8fbb-4ef5e8eabd97.gif)
+
+* ademas de poder hacer un filtrado ascendente y descendente ,donde el usuario elige que el tipo de filtrado que quiere ,desea o necesita
+
+![gif1 nombres](https://user-images.githubusercontent.com/39390011/42178110-c1bb6a5c-7df4-11e8-8f51-e1fe693e2754.gif)
+
+* no obstante añadimos otros tipos de filtrado por porcentaje de completitud total,porcentaje de ejercicios auto-corregidos, porcentaje de cuestionarios completados, puntuacion promedio en cuestionarios completados , y finalmente de lecturas completadas, cada una con su opcion de filtrado ascendente y descendente
+
+![gif avances](https://user-images.githubusercontent.com/39390011/42178099-b28be3ea-7df4-11e8-8430-73d642901ebd.gif)
+
+
+
