@@ -297,5 +297,26 @@ Tomamos en cuenta los principios del diseño responsivo y mobile first (uso de m
 
 ![gif avances](https://user-images.githubusercontent.com/39390011/42178099-b28be3ea-7df4-11e8-8430-73d642901ebd.gif)
 
+### guia de usuario
+* pagina de login
+
+![1](https://user-images.githubusercontent.com/39390011/42237626-ef655e8e-7ec3-11e8-9f9c-7a6152cd5b1a.jpg)
+
+* pagina de inicio del data dashboard
+
+![2](https://user-images.githubusercontent.com/39390011/42237627-ef826b1e-7ec3-11e8-8ab5-56a53afa849d.jpg)
+
+* pagina que aparece cuando selecionas un cohort
+![3](https://user-images.githubusercontent.com/39390011/42237620-eed9fede-7ec3-11e8-88d9-adc7fcaa62d2.jpg)
+
+* opciones de filtrado del select, no olvides hacer click al boton filtrar
+
+![4](https://user-images.githubusercontent.com/39390011/42237623-eefab354-7ec3-11e8-9ebe-fb486d345b95.jpg)
+
+* opcion de filtrado con orden especifica
+
+![5](https://user-images.githubusercontent.com/39390011/42237624-ef1e2212-7ec3-11e8-9c79-18735ed4d4b9.jpg)
+
+
 
 
