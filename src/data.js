@@ -186,7 +186,7 @@ window.filterUsers = (users, search) => {
 }
 window.processCohortData = (options) => {
   let courses = [];
-  for (let key in options.cohort[0].coursesIndex) {
+  for (key in options.cohort[0].coursesIndex) {
     courses.push(key);
   }
   let students = options.cohortData.users.filter(

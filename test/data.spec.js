@@ -73,6 +73,7 @@ describe('data', () => {
           percent: 55,
         });
       });
+
     });
 
   });

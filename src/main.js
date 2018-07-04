@@ -1,4 +1,4 @@
-const welcome = document.getElementById('welcome');
+var welcome = document.getElementById('welcome');
 
 //aqui crea una variable obteniendo desde el id  del html
 //seleccion del nodo padre
@@ -11,7 +11,7 @@ fetch('https://api.laboratoria.la/cohorts/')
     const listCohorts = json;
     //llamamos la funcion para que pase como argumentos los datos del json y creen un nodo de opction dentro de un select
     for (let i = 0; i < listCohorts.length; i++) {
-      if (listCohorts[i].id.includes("lim-2018")) {
+      if (listCohorts[i].id.includes("lim-2018-03-pre-core")) {
         //creo el elemento option por cada cohort
         const optionElements = document.createElement('option');
         //creo el texto (nodo  de texto)
@@ -65,6 +65,7 @@ buttonSort.addEventListener('click', () => {
 
 selectElement.addEventListener('change', () => {
   loadStats();
+  divFilters.style.display = 'block';
 });
 
 const loadStats = () => {
@@ -99,17 +100,8 @@ const loadStats = () => {
           search: ''
         };
 
-        let idCohort = selectElement.value; //value del select cohorts
+        idCohort = selectElement.value; //value del select cohorts
 
-        let usersCohort = users.filter(
-          user => user.signupCohort == idCohort
-        );
-        if(usersCohort.length == 0){
-          divFilters.style.display = 'none';
-          listStudents.innerHTML ="<h2>Esta información no esta disponible</h2>";
-          return;
-        }
-        divFilters.style.display = 'block';
         let selectedCohort = cohorts.filter(
           cohort => cohort.id == idCohort
         );
